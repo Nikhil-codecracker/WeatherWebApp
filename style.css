@@ -1,15 +1,16 @@
 body {
+    background-color: #E5E8FF !important;
     margin: 0;
     font-family: "Lato", sans-serif;
   }
   
   .sidebar {
-    margin: 0;
+    border-radius: 2rem;
+    margin: 2rem 0;
     padding: 0;
     width: 200px;
-    background-color: #f1f1f1;
+    background-color: white;
     position: fixed;
-    height: 100%;
     overflow: auto;
   }
   
@@ -29,13 +30,6 @@ body {
     background-color: #555;
     color: white;
   }
-  
-  div.content {
-    margin-left: 200px;
-    padding: 1px 16px;
-    height: 1000px;
-  }
-  
   @media screen and (max-width: 700px) {
     .sidebar {
       width: 100%;
@@ -54,13 +48,29 @@ body {
   }
 
   .container{
+    margin: 2rem 0;
     height: 40rem;
-    background-color: grey;
+    background-color: white;
     border-radius: 2rem;
   }
 
   .highlight{
+    padding: 2rem;
+    margin: 2rem 0;
     background-color: #F1F3FF;
     border-radius: 1rem;
     height: 90%;
+}
+.alignment1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.alignment2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
