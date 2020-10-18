@@ -92,3 +92,12 @@ body {
 ::-webkit-scrollbar:hover{
     width: 12px;
 }
+
+.speed{
+    font-size: 2.5rem;
+}
+
+.unit{
+    font-size:1.5rem;
+    margin-left: 0.2rem
+}
