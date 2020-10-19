@@ -1,123 +1,179 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Weather.io</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="./bootstrap/bootstrap.min.css" >
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    </head>
 
-    <body>
-        <div class="container">
-            <div class="row alignment2" style="height: 100%;">
-              <div class="col-sm-3" style="height:100%">
-                <div class="img">
-                    <div class="row">
-                        <div class="col-6">
-                            <img src="images/weather icon.png" style="width: 60%; margin: 2rem 0 0 0rem;">
-                        </div>
-                        <div class="col-2">
-                            <h3 class="alignment2" style="margin: 3rem 0 0 0;">Weather.io</h3>
-                        </div>
-                    </div>
+<head>
+  <title>Weather.io</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row alignment2" style="height: 100%;">
+      <div class="col-sm-3" style="height:100%">
+        <div class="img">
+          <div class="row">
+            <div class="col-6">
+              <img src="images/weather icon.png" style="width: 60%; margin: 2rem 0 0 0rem;">
+            </div>
+            <div class="col-2">
+              <h3 class="alignment2" style="margin: 3rem 0 0 0;">Weather.io</h3>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar">
+          <a class="active" href="#home">Home</a>
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+        </div>
+      </div>
+      <div class="col-sm-5 highlight">
+        <h4 style="margin-top: 1rem;">Today's Highlights</h4>
+        <div class="row" style="height:30%;">
+          <div class="col-6 alignment2">
+            <div class="card" style="width: 18rem; ">
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Ultra-Violet Index</h6>
+                <div class="progress">
+                  <div class="progress-bar bg-warning" style="width:40%"></div>
                 </div>
-                <div class="sidebar">
-                    <a class="active" href="#home">Home</a>
-                    <a href="#news">News</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#about">About</a>
-                  </div>
-              </div>
-              <div class="col-sm-5 highlight">
-                  <h4 style="margin-top: 1rem;">Today's Highlights</h4>
-                <div class="row" style="height:30%;">
-                    <div class="col-6 alignment2">
-                        <div class="card" style="width: 18rem; ">
-                            <div class="card-body">
-                              <h6 class="card-subtitle mb-2 text-muted">Ultra-Violet Index</h6>
-                                <div class="progress">
-                                <div class="progress-bar bg-warning" style="width:40%"></div>
-                                </div>
-                                <h5 class="card-title" style="text-align: center;">5</h5>
-                                <p class="card-text" style="font-size: 0.9rem;">Protection needed. Seek shade during late morning through mid-afternoon..</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 alignment2">
-                        <div class="card" style="width: 18rem;">
-                            <div class="card-body">
-                              <h6 class="card-subtitle mb-2 text-muted">Sunrise and Sunset</h6>
-                              <div class="row" style="padding: 5px 0;">
-                                  <div class="col-6">
-                                    <span class="iconify sun" data-icon="wi-sunrise" data-inline="false" style="color: orange; font-size: 3rem;"></span>
-                                  </div>
-                                  <div class="col-6 alignment2">
-                                    <h5 class="card-title">5:15am</h5>
-                                  </div>
-                              </div>
-                              <div class="row" style="padding: 5px 0;">
-                                <div class="col-6">
-                                  <span class="iconify" data-icon="wi-sunset" data-inline="false" style="color: orange; font-size: 3.5rem;"></span>
-                                </div>
-                                <div class="col-6 alignment2">
-                                  <h5 class="card-title">5:15am</h5>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="height:30%;">
-                    <div class="col-6 alignment2">
-                        <div class="card" style="width: 18rem; ">
-                            <div class="card-body">
-                              <h6 class="card-subtitle mb-2 text-muted">Wind Status</h6>
-                              <p class="speed">16<span class="unit">km/h</span></p>
-                              <h6>WSW</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 alignment2">
-                        <div class="card" style="width: 18rem; ">
-                            <div class="card-body">
-                              <h6 class="card-subtitle mb-2 text-muted">Visibility</h6>
-                              <p class="speed">12<span class="unit">km</span></p>
-                              <h6>Average</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="height:30%;">
-                    <div class="col-6 alignment2">
-                        <div class="card" style="width: 18rem; ">
-                            <div class="card-body">
-                              <h6 class="card-subtitle mb-2 text-muted">Humidity</h6>
-                              <p class="speed">40<span class="unit">%</span></p>
-                              <h6>Normal</h6>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-6 alignment2">
-                        <div class="card" style="width: 18rem; ">
-                            <div class="card-body">
-                              <h6 class="card-subtitle mb-2 text-muted">Air Quality</h6>
-                              <p class="speed">33</p>
-                              <h6>Good</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </div>
-              <div class="col-sm-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dolor eaque ipsam ab veritatis dolorum quo nulla fugiat, voluptatum perspiciatis cupiditate nisi sit dignissimos tenetur exercitationem placeat illum similique reiciendis?
+                <h5 class="card-title" style="text-align: center;">5</h5>
+                <p class="card-text" style="font-size: 0.9rem;">Protection needed. Seek shade during late morning
+                  through mid-afternoon..</p>
               </div>
             </div>
           </div>
+          <div class="col-6 alignment2">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Sunrise and Sunset</h6>
+                <div class="row" style="padding: 5px 0;">
+                  <div class="col-6">
+                    <span class="iconify sun" data-icon="wi-sunrise" data-inline="false"
+                      style="color: orange; font-size: 3rem;"></span>
+                  </div>
+                  <div class="col-6 alignment2">
+                    <h5 class="card-title">5:15am</h5>
+                  </div>
+                </div>
+                <div class="row" style="padding: 5px 0;">
+                  <div class="col-6">
+                    <span class="iconify" data-icon="wi-sunset" data-inline="false"
+                      style="color: orange; font-size: 3.5rem;"></span>
+                  </div>
+                  <div class="col-6 alignment2">
+                    <h5 class="card-title">5:15am</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="height:30%;">
+          <div class="col-6 alignment2">
+            <div class="card" style="width: 18rem; ">
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Wind Status</h6>
+                <p class="speed">16<span class="unit">km/h</span></p>
+                <h6>WSW</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 alignment2">
+            <div class="card" style="width: 18rem; ">
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Visibility</h6>
+                <p class="speed">12<span class="unit">km</span></p>
+                <h6>Average</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="height:30%;">
+          <div class="col-6 alignment2">
+            <div class="card" style="width: 18rem; ">
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Humidity</h6>
+                <p class="speed">40<span class="unit">%</span></p>
+                <h6>Normal</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 alignment2">
+            <div class="card" style="width: 18rem; ">
+              <div class="card-body">
+                <h6 class="card-subtitle mb-2 text-muted">Air Quality</h6>
+                <p class="speed">33</p>
+                <h6>Good</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
 
-        <script src="script.js"></script>
-        <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    </body>
+        <!--START OF TOP DETAILS-->
+        <div class="row1" style="margin-top: -17rem;">
+          <div class="row" style="padding: 5px 0;">
+            <div class="col-6 ">
+              <h5 class="location mb-2">The Hague,</h5>
+              <h6 class="country-name">Netherlands</h6>
+              <h6 class="day-date">Mon, 10 Nov 2020</h6>
+            </div>
+            <div class="col-6 alignment2">
+              <img src="images/netherlands.png" style="width: 30%; margin: -0.2rem -4rem 0 0rem;">
+            </div>
+          </div>
+        </div>
+        <!--END OF TOP DETAILS-->
+
+        <!--START OF TEMPERATURE DETAILS-->
+        <div class="row2" style="margin-top:2rem">
+          <h4 class="today mb-2 text-center">Today</h4>
+          <div class="row" style="padding: 5px 0;">
+            <div class="col-6 ">
+              <img src="images/sun-icon.png" style="width: 40%; margin: 1rem 0rem 0 8rem;">
+            </div>
+            <div class="col-6 alignment2">
+              <p class="temper">19
+              <p class="cel"><sup>&#8451;</sup></p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--START OF TEMPERATURE DETAILS-->
+
+        <!--START OF WEATHER DETAILS (ICONS)-->
+        <div class="row3" style="margin-top:2rem">
+          <div class="row">
+            <div class="col-4 alignment2">
+              <img src="images/sun-icon.png" style="width: 40%; margin: 0rem 0 0 0rem;">
+            </div>
+            <div class="col-4 alignment2">
+              <img src="images/sun-icon.png" style="width: 40%; margin: 0rem 0 0 0rem;">
+            </div>
+            <div class="col-4 alignment2">
+              <img src="images/sun-icon.png" style="width: 40%; margin: 0rem 0 0 0rem;">
+            </div>
+          </div>
+        </div>
+        <!--END OF WEATHER DETAILS (ICONS)-->
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>

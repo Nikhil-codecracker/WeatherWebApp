@@ -104,3 +104,40 @@ body {
 a{
     text-decoration: none !important;
 }
+
+.location {
+  color:#333866;
+  font-weight: bold;
+}
+
+.country-name {
+  color:#333866;
+  font-weight: bold;
+  font-size:18px;
+}
+
+.day-date {
+  color:#adb1cc;
+  font-weight: bold;
+  font-size:13px;
+}
+
+.today {
+  color:#333866;
+  font-size:30px;
+}
+
+.temper {
+  margin-top:1rem;
+  margin-left:-7rem;
+  font-size: 2.5rem;
+  font-weight:900;
+  color:#333866;
+
+}
+
+.cel {
+  margin-top:1rem;
+  font-size: 1.5rem;
+  color:#333866;
+}
