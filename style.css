@@ -8,12 +8,13 @@ body {
     border-radius: 1rem;
     margin: 2rem 0;
     padding: 0;
-    width: 200px;
+    width: 17.5rem;
     background-color: white;
     overflow: auto;
   }
   
   .sidebar a {
+    font-size: 1.3rem;
     display: block;
     color: black;
     padding: 16px;
