@@ -1,5 +1,12 @@
 var uv = ["No protection needed. You can safely stay outside", "Protection needed. Seek shade during late morning through mid-afternoon.", "Extra protection needed. Be careful outside"]
 
+var uvScale = ["Extreme","Very High","High","Moderate","Low"];
+var visibleIndex = ["Excellent","Very Good","Good","Moderate","Poor"];
+var humidityIndex = [" Very Dry","Dry","Moderate","Humid","Very Humid"];
+var airQualityIndex = ["Good","Moderate","Unhealthy","Very Unhealthy","Hazardous"];
+var dayOfWeek = ["Sun","Mon","Tue","Wed","Thur","Fri","Sat"];
+var monthOfYear = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
 //Main Call to original Page
 const main = new XMLHttpRequest();
 const urlweather = 'https://api.weatherapi.com/v1/forecast.json?key=b237bbd52a554e65b4b62837202010&q=Delhi&days=5';
@@ -14,7 +21,6 @@ main.onload = (e) => {
     var cond = res.current.condition.text;
     var wind_speed = res.current.wind_kph;
     var wind_dir = res.current.wind_dir;
-    var rain = res.current.precip_mm;
     var humidity = res.current.humidity;
     var visibility = res.current.vis_km;
     var uv = res.current.uv;
@@ -28,6 +34,18 @@ main.onload = (e) => {
     }
     var sunrise = daydata.forecastday[0].astro.sunrise;
     var sunset = daydata.forecastday[0].astro.sunset;
+    var rain = daydata.forecastday[0].day.daily_will_it_rain;
+    var time = new Date();
+    var daynum = time.getDay();
+    var date = time.getDate();
+    var monthnum = time.getMonth();
+    var year = time.getFullYear();
+    var day =  dayOfWeek[daynum];
+    var month = monthOfYear[monthnum];
+
+    var todayDate = day + ", " + date + " " + month + " " + year;
+    console.log(todayDate);
+
     console.log(sunrise,sunset)
     console.log(city, country, temp, cond, wind_speed, wind_dir, rain, humidity, visibility, uv);
 }
@@ -130,3 +148,4 @@ dict = {
         "country": "Netherlands",
     }
 }
+
