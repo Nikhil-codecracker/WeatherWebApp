@@ -155,3 +155,9 @@ a{
 .cardx{
   border: solid #F1F3FF !important;
 }
+.time{
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
