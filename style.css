@@ -2,6 +2,7 @@ body {
     background-color: #E5E8FF !important;
     margin: 0;
     font-family: "Lato", sans-serif;
+    color: #333866 !important
   }
 .container{
     margin: 4rem 0;
@@ -119,7 +120,7 @@ a{
 }
 .nav{
   font-size: 1.5rem;
-  color: black;
+  color: #333866;
   font-family: 'Domine', serif;
   margin: 3rem 0 2rem 3rem;
 
