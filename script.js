@@ -42,6 +42,7 @@ main.onload = (e) => {
     var year = time.getFullYear();
     var day =  dayOfWeek[daynum];
     var month = monthOfYear[monthnum];
+    var weathercond = daydata.forecastday[0].day.condition.text;
 
     var todayDate = day + ", " + date + " " + month + " " + year;
     console.log(todayDate);
