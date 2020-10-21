@@ -23,13 +23,14 @@ main.onload = (e) => {
 
 //AirQuality Index api Call
 const aqi = new XMLHttpRequest();
-const urlaqi = 'http://api.waqi.info/feed/shanghai/?token=demo';
+const urlaqi = 'http://api.airvisual.com/v2/city?city=New Delhi&state=Delhi&country=India&key=58535385-a3a3-4622-af58-d2c51254a9cb';
 aqi.open("GET", urlaqi);
 aqi.send();
 
 aqi.onload = (e) => {
-    var resaqi = (aqi.responseText);
-    console.log();
+    var resaqi = JSON.parse(aqi.responseText);
+    var aqi_val = resaqi.data.current.pollution.aqius
+    console.log(aqi_val);
 }
 
 
