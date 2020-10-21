@@ -26,7 +26,9 @@ main.onload = (e) => {
         console.log(daydata.forecastday[i].day.avgtemp_c)
         daytemp.push(daydata.forecastday[i].day.avgtemp_c)
     }
-    
+    var sunrise = daydata.forecastday[0].astro.sunrise;
+    var sunset = daydata.forecastday[0].astro.sunset;
+    console.log(sunrise,sunset)
     console.log(city, country, temp, cond, wind_speed, wind_dir, rain, humidity, visibility, uv);
 }
 
@@ -42,20 +44,6 @@ aqi.onload = (e) => {
     console.log(resaqi)
     // console.log(aqi_val);
 }
-
-
-// //Sunset Sunrise Api Call
-// const sun = new XMLHttpRequest();
-// const urlsun = 'https://api.sunrise-sunset.org/json?lat=28.7188327&lng=77.1370002&date=today';
-// sun.open("GET", urlsun);
-// sun.send();
-
-// sun.onload = (e) => {
-//     var urlsun = JSON.parse(sun.responseText);
-//     var sunrise = urlsun.results.sunrise;
-//     var sunset = urlsun.results.sunset;
-//     console.log(sunrise, sunset);
-// }
 
 //Location Function
 function getLocation() {
