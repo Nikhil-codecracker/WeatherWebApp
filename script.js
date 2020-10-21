@@ -2,7 +2,7 @@ var uv = ["No protection needed. You can safely stay outside", "Protection neede
 
 //Main Call to original Page
 const main = new XMLHttpRequest();
-const urlweather = 'https://api.weatherapi.com/v1/current.json?key=b237bbd52a554e65b4b62837202010&q=Paris';
+const urlweather = 'https://api.weatherapi.com/v1/forecast.json?key=b237bbd52a554e65b4b62837202010&q=Delhi&days=5';
 main.open("GET", urlweather);
 main.send();
 
@@ -18,6 +18,15 @@ main.onload = (e) => {
     var humidity = res.current.humidity;
     var visibility = res.current.vis_km;
     var uv = res.current.uv;
+    var lat = res.location.lat;
+    var lng = res.location.lon;
+    var daydata = res.forecast;
+    let daytemp = new Array(5);
+    for (var i=0;i<3;i++){
+        console.log(daydata.forecastday[i].day.avgtemp_c)
+        daytemp.push(daydata.forecastday[i].day.avgtemp_c)
+    }
+    
     console.log(city, country, temp, cond, wind_speed, wind_dir, rain, humidity, visibility, uv);
 }
 
@@ -31,22 +40,22 @@ aqi.onload = (e) => {
     var resaqi = JSON.parse(aqi.responseText);
     var aqi_val = resaqi.data.current.pollution.aqius
     console.log(resaqi)
-    console.log(aqi_val);
+    // console.log(aqi_val);
 }
 
 
-//Sunset Sunrise Api Call
-const sun = new XMLHttpRequest();
-const urlsun = 'https://api.sunrise-sunset.org/json?lat=28.7188327&lng=77.1370002&date=today';
-sun.open("GET", urlsun);
-sun.send();
+// //Sunset Sunrise Api Call
+// const sun = new XMLHttpRequest();
+// const urlsun = 'https://api.sunrise-sunset.org/json?lat=28.7188327&lng=77.1370002&date=today';
+// sun.open("GET", urlsun);
+// sun.send();
 
-sun.onload = (e) => {
-    var urlsun = JSON.parse(sun.responseText);
-    var sunrise = urlsun.results.sunrise;
-    var sunset = urlsun.results.sunset;
-    console.log(sunrise, sunset);
-}
+// sun.onload = (e) => {
+//     var urlsun = JSON.parse(sun.responseText);
+//     var sunrise = urlsun.results.sunrise;
+//     var sunset = urlsun.results.sunset;
+//     console.log(sunrise, sunset);
+// }
 
 //Location Function
 function getLocation() {
