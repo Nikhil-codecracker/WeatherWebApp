@@ -253,9 +253,12 @@ function locationpage2(city){
         var temp = resp.current.temp_c;
         var cond = resp.current.condition.text;
         document.getElementById(city).innerHTML = temp;
-        console.log("Temp" + temp)
+        //console.log(city + cond)
     }
 }
+
+var arr = ["Delhi", "London", "Paris", "New York", "Mumbai", "Kolkata"]
+arr.forEach(locationpage2);
 
 document.getElementById("location").onclick = () =>{
     document.getElementById("innerconsole").style.display = "none";
