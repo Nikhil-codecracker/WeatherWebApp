@@ -154,7 +154,8 @@ a{
 
 .con-search {
   position: relative;
-  width: 400px;
+  width: 90%;
+  left: 1.4rem;
 }
 .focus .content-results {
   opacity: 1;
