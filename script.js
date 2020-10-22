@@ -245,11 +245,18 @@ getValues();
 
 document.getElementById("location").onclick = () =>{
     document.getElementById("innerconsole").style.display = "none";
+    document.getElementById("search").style.display = "block";
     
 }
 
 document.getElementById("dashboard").onclick = () =>{
     document.getElementById("innerconsole").style.display = "block";
+    document.getElementById("search").style.display = "none";
+}
+
+document.getElementById("Map").onclick = () =>{
+    document.getElementById("innerconsole").style.display = "none";
+    document.getElementById("search").style.display = "none";
 }
 
 

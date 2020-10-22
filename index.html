@@ -46,7 +46,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-5 highlight">
+      <div class="col-sm-5 highlight alignment1">
         <div id="innerconsole">
           <h4 style="margin-top: 1rem;">Today's Highlights</h4>
           <div class="row" style="height:30%;">
@@ -113,7 +113,7 @@
               <div class="card" style="width: 18rem; ">
                 <div class="card-body">
                   <h6 class="card-subtitle mb-2 text-muted">Humidity</h6>
-                  <p class="speed" ><strong id="humidity"></strong><span class="unit">%</span></p>
+                  <p class="speed"><strong id="humidity"></strong><span class="unit">%</span></p>
                   <h6 id="humidity-status"></h6>
                 </div>
               </div>
@@ -122,90 +122,148 @@
               <div class="card" style="width: 18rem; ">
                 <div class="card-body">
                   <h6 class="card-subtitle mb-2 text-muted">Air Quality</h6>
-                  <p class="speed" ><strong id="aqi-val">152</strong></p>
+                  <p class="speed"><strong id="aqi-val">152</strong></p>
                   <h6 id="aqi-status">Unhealthy</h6>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div id="search">
+        <div id="search" style="display: none;">
           <div class="con-search notValue">
             <div class="con-input">
-                <input
-                    onblur="handleBlur()"
-                    onfocus="handleFocus(event)"
-                    placeholder="Search Object"
-                    oninput="handleSearch(event)"
-                    type="text">
-                <i class="bx bx-search"></i>
-                <i onclick="handleRemove()" class="bx bx-x"></i>
+              <input onblur="handleBlur()" onfocus="handleFocus(event)" placeholder="Search Object"
+                oninput="handleSearch(event)" type="text">
+              <i class="bx bx-search"></i>
+              <i onclick="handleRemove()" class="bx bx-x"></i>
             </div>
             <div class="content-results">
-                <div class="con-results">
-                    <div class="not-results">Not Results</div>
-                </div>
+              <div class="con-results">
+                <div class="not-results">Not Results</div>
+              </div>
             </div>
-        </div>
+          </div>
+          <!-- <div class="container"> -->
+            <div class="row">
+              <div class="col-6">
+                <div class="card" style="width: 12rem; ">
+                  <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Humidity</h6>
+                    <p class="speed"><strong id="humidity"></strong><span class="unit">%</span></p>
+                    <h6 id="humidity-status"></h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card" style="width: 12rem; ">
+                  <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Humidity</h6>
+                    <p class="speed"><strong id="humidity"></strong><span class="unit">%</span></p>
+                    <h6 id="humidity-status"></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="card" style="width: 12rem; ">
+                  <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Humidity</h6>
+                    <p class="speed"><strong id="humidity"></strong><span class="unit">%</span></p>
+                    <h6 id="humidity-status"></h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card" style="width: 12rem; ">
+                  <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Humidity</h6>
+                    <p class="speed"><strong id="humidity"></strong><span class="unit">%</span></p>
+                    <h6 id="humidity-status"></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <div class="card" style="width: 12rem; ">
+                  <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Humidity</h6>
+                    <p class="speed"><strong id="humidity"></strong><span class="unit">%</span></p>
+                    <h6 id="humidity-status"></h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card" style="width: 12rem; ">
+                  <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted">Humidity</h6>
+                    <p class="speed"><strong id="humidity"></strong><span class="unit">%</span></p>
+                    <h6 id="humidity-status"></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- </div> -->
         </div>
       </div>
       <div class="col-sm-4">
 
         <!--START OF TOP DETAILS-->
-          <div class="row" style="padding: 5px 0;">
-            <div class="col-6 ">
-              <h5 class="location mb-2" id="city"></h5>
-              <h6 class="country-name" id="country"></h6>
-              <h6 class="day-date" id="date"></h6>
-            </div>
-            <div class="col-6 alignment2">
-              <img src="images/netherlands.png" style="width: 30%; margin: -0.2rem -4rem 0 0rem;">
-            </div>
+        <div class="row" style="padding: 5px 0;">
+          <div class="col-6 ">
+            <h5 class="location mb-2" id="city"></h5>
+            <h6 class="country-name" id="country"></h6>
+            <h6 class="day-date" id="date"></h6>
           </div>
+          <div class="col-6 alignment2">
+            <img src="images/netherlands.png" style="width: 30%; margin: -0.2rem -4rem 0 0rem;">
+          </div>
+        </div>
         <!--END OF TOP DETAILS-->
 
         <!--START OF TEMPERATURE DETAILS-->
-          <h4 class="today mb-2 text-center">Today</h4>
-          <div class="row" style="padding: 5px 0;">
-            <div class="col-6 ">
-              <img src="images/sun-icon.png" style="width: 40%; margin: 1rem 0rem 0 8rem;">
-            </div>
-            <div class="col-6 alignment2">
-              <p class="temper" id="today">
-              <p class="cel"><sup>&#8451;</sup></p>
-              </p>
-            </div>
+        <h4 class="today mb-2 text-center">Today</h4>
+        <div class="row" style="padding: 5px 0;">
+          <div class="col-6 ">
+            <img src="images/sun-icon.png" style="width: 40%; margin: 1rem 0rem 0 8rem;">
           </div>
-          <div class="row">
-            <div class="col alignment2">
-              <h4 id="weather"></h4>
-            </div>
+          <div class="col-6 alignment2">
+            <p class="temper" id="today">
+            <p class="cel"><sup>&#8451;</sup></p>
+            </p>
           </div>
+        </div>
+        <div class="row">
+          <div class="col alignment2">
+            <h4 id="weather"></h4>
+          </div>
+        </div>
         <!--START OF TEMPERATURE DETAILS-->
 
         <!--START OF WEATHER DETAILS (ICONS)-->
-          <div class="row">
-            <div class="col-4 alignment2">
-              <img src="images/sun-icon.png" style="width: 40%; margin: 0rem 0 0 0rem;">
-            </div>
-            <div class="col-4 alignment2">
-              <img src="images/sun-icon.png" style="width: 40%; margin: 0rem 0 0 0rem;">
-            </div>
-            <div class="col-4 alignment2">
-              <img src="images/sun-icon.png" style="width: 40%; margin: 0rem 0 0 0rem;">
-            </div>
+        <div class="row">
+          <div class="col-4 alignment2">
+            <img src="images/sun-icon.png" style="width: 40%; margin: 0rem 0 0 0rem;">
           </div>
-          <div class="row">
-            <div class="col-4">
-              <h6 class="alignment2" id="windspeedright"></h6>
-            </div>
-            <div class="col-4">
-              <h6 class="alignment2" id="humidityright"></h6>
-            </div>
-            <div class="col-4">
-              <h6 class="alignment2" id="precipitation"></h6>
-            </div>
+          <div class="col-4 alignment2">
+            <img src="images/sun-icon.png" style="width: 40%; margin: 0rem 0 0 0rem;">
           </div>
+          <div class="col-4 alignment2">
+            <img src="images/sun-icon.png" style="width: 40%; margin: 0rem 0 0 0rem;">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <h6 class="alignment2" id="windspeedright"></h6>
+          </div>
+          <div class="col-4">
+            <h6 class="alignment2" id="humidityright"></h6>
+          </div>
+          <div class="col-4">
+            <h6 class="alignment2" id="precipitation"></h6>
+          </div>
+        </div>
         <!--END OF WEATHER DETAILS (ICONS)-->
         <div class="row">
           <div class="col">
@@ -250,9 +308,9 @@
             </div>
           </div>
         </div>
-        </div>
       </div>
     </div>
+  </div>
   </div>
 
   <script src="script.js"></script>
