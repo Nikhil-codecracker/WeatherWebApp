@@ -7,6 +7,9 @@ var dayOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
 var monthOfYear = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 
+var long;
+var latitude;
+
 var dict = {
     "New Delhi": {
         "name": "New Delhi",
@@ -96,6 +99,8 @@ function getValues(city = "New Delhi") {
         var uv = res.current.uv;
         var lat = res.location.lat;
         var lng = res.location.lon;
+        long = lng;
+        latitude = lat;
         var daydata = res.forecast;
         let daytemp = new Array();
         for (var i = 0; i < 3; i++) {
@@ -617,7 +622,7 @@ function renderResults(results, value) {
 // Initialize and add the map
 function initMap() {
     // The location of Uluru
-    const uluru = { lat: -25.344, lng: 131.036 };
+    const uluru = { lat: latitude, lng: long };
     // The map, centered at Uluru
     const map = new google.maps.Map(document.getElementById("map"), {
       zoom: 4,
