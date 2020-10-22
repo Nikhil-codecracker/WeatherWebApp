@@ -277,7 +277,18 @@ document.getElementById("Map").onclick = () =>{
     document.getElementById("search").style.display = "none";
 }
 
+var cards = ["card1","card2","card3","card4","card5","card6"]
 
+cards.forEach(change);
+
+function change(item,index){
+    document.getElementById(item).onclick = () => {
+        document.getElementById("innerconsole").style.display = "block";
+        document.getElementById("search").style.display = "none";
+
+        getValues(arr[index]);
+    }
+}
 
 const users = [
     {
