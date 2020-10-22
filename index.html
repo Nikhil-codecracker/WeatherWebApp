@@ -9,6 +9,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Domine:wght@500&display=swap" rel="stylesheet">
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.6/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeESyxuRqSIk1SNCy3PyqSy9AtBOSR-OI&callback=initMap&libraries=&v=weekly"
+    defer></script>
 </head>
 
 <body>
@@ -143,69 +145,69 @@
               </div>
             </div>
           </div>
-          <!-- <div class="container"> -->
-            <div class="row" style="height:12rem">
-              <div class="col-6">
-                <div class="card" style="width: 12rem;cursor: pointer; " id="card1">
-                  <div class="card-body">
-                    <h6 class="card-subtitle mb-2 text-muted">Delhi</h6>
-                    <p class="speed"><strong id="Delhi"></strong><span class="celcius"><sup>&#8451;</sup></span>
-                    <h6 id="Delhicond"></h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="card" style="width: 12rem;cursor: pointer; " id="card2">
-                  <div class="card-body">
-                    <h6 class="card-subtitle mb-2 text-muted">London</h6>
-                    <p class="speed"><strong id="London"></strong><span class="celcius"><sup>&#8451;</sup></span>
-                    <h6 id="Londoncond"></h6>
-                  </div>
+          <div class="row" style="height:12rem">
+            <div class="col-6">
+              <div class="card" style="width: 12rem;cursor: pointer; " id="card1">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted">Delhi</h6>
+                  <p class="speed"><strong id="Delhi"></strong><span class="celcius"><sup>&#8451;</sup></span>
+                  <h6 id="Delhicond"></h6>
                 </div>
               </div>
             </div>
-            <div class="row" style="height:12rem">
-              <div class="col-6">
-                <div class="card" style="width: 12rem;cursor: pointer; " id="card3">
-                  <div class="card-body">
-                    <h6 class="card-subtitle mb-2 text-muted">Paris</h6>
-                    <p class="speed"><strong id="Paris"></strong><span class="celcius"><sup>&#8451;</sup></span>
-                    <h6 id="Pariscond"></h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="card" style="width: 12rem;cursor: pointer; " id="card4">
-                  <div class="card-body">
-                    <h6 class="card-subtitle mb-2 text-muted">New York</h6>
-                    <p class="speed"><strong id="New York"></strong><span class="celcius"><sup>&#8451;</sup></span>
-                    <h6 id="New Yorkcond"></h6>
-                  </div>
+            <div class="col-6">
+              <div class="card" style="width: 12rem;cursor: pointer; " id="card2">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted">London</h6>
+                  <p class="speed"><strong id="London"></strong><span class="celcius"><sup>&#8451;</sup></span>
+                  <h6 id="Londoncond"></h6>
                 </div>
               </div>
             </div>
-            <div class="row" style="height:12rem">
-              <div class="col-6">
-                <div class="card" style="width: 12rem;cursor: pointer; " id="card5">
-                  <div class="card-body">
-                    <h6 class="card-subtitle mb-2 text-muted">Mumbai</h6>
-                    <p class="speed"><strong id="Mumbai"></strong><span class="celcius"><sup>&#8451;</sup></span>
-                    <h6 id="Mumbaicond"></h6>
-                  </div>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="card" style="width: 12rem;cursor: pointer; " id="card6">
-                  <div class="card-body">
-                    <h6 class="card-subtitle mb-2 text-muted">Kolkata</h6>
-                    <p class="speed"><strong id="Kolkata"></strong><span class="celcius"><sup>&#8451;</sup></span>
-                    <h6 id="Kolkatacond"></h6>
-                  </div>
+          </div>
+          <div class="row" style="height:12rem">
+            <div class="col-6">
+              <div class="card" style="width: 12rem;cursor: pointer; " id="card3">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted">Paris</h6>
+                  <p class="speed"><strong id="Paris"></strong><span class="celcius"><sup>&#8451;</sup></span>
+                  <h6 id="Pariscond"></h6>
                 </div>
               </div>
             </div>
-          <!-- </div> -->
+            <div class="col-6">
+              <div class="card" style="width: 12rem;cursor: pointer; " id="card4">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted">New York</h6>
+                  <p class="speed"><strong id="New York"></strong><span class="celcius"><sup>&#8451;</sup></span>
+                  <h6 id="New Yorkcond"></h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="height:12rem">
+            <div class="col-6">
+              <div class="card" style="width: 12rem;cursor: pointer; " id="card5">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted">Mumbai</h6>
+                  <p class="speed"><strong id="Mumbai"></strong><span class="celcius"><sup>&#8451;</sup></span>
+                  <h6 id="Mumbaicond"></h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card" style="width: 12rem;cursor: pointer; " id="card6">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted">Kolkata</h6>
+                  <p class="speed"><strong id="Kolkata"></strong><span class="celcius"><sup>&#8451;</sup></span>
+                  <h6 id="Kolkatacond"></h6>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <!-- Map Function -->
+        <div id="map"></div>
       </div>
       <div class="col-sm-4">
 

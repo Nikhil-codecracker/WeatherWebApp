@@ -264,17 +264,20 @@ arr.forEach(locationpage2);
 document.getElementById("location").onclick = () =>{
     document.getElementById("innerconsole").style.display = "none";
     document.getElementById("search").style.display = "block";
+    document.getElementById("map").style.display = "none";
     
 }
 
 document.getElementById("dashboard").onclick = () =>{
     document.getElementById("innerconsole").style.display = "block";
     document.getElementById("search").style.display = "none";
+    document.getElementById("map").style.display = "none";
 }
 
 document.getElementById("Map").onclick = () =>{
     document.getElementById("innerconsole").style.display = "none";
     document.getElementById("search").style.display = "none";
+    document.getElementById("map").style.display = "block";
 }
 
 var cards = ["card1","card2","card3","card4","card5","card6"]
@@ -611,3 +614,18 @@ function renderResults(results, value) {
         }, 20);
     })
 }
+// Initialize and add the map
+function initMap() {
+    // The location of Uluru
+    const uluru = { lat: -25.344, lng: 131.036 };
+    // The map, centered at Uluru
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 4,
+      center: uluru,
+    });
+    // The marker, positioned at Uluru
+    const marker = new google.maps.Marker({
+      position: uluru,
+      map: map,
+    });
+  }

@@ -286,3 +286,7 @@ a{
   border-radius: 5px;
   background: #000;
 }
+#map {
+  height: 100%;
+  width: 100%;
+}
