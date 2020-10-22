@@ -127,15 +127,15 @@ function getValues(city = "New Delhi") {
         document.getElementById("date").innerHTML = todayDate;
         document.getElementById("today").innerHTML = temp;
         document.getElementById("weather").innerHTML = weathercond;
-        document.getElementById("windspeedright").innerHTML = wind_speed;
+        document.getElementById("windspeedright").innerHTML = wind_speed + "km/h";
         document.getElementById("humidityright").innerHTML = humidity + "%";
         document.getElementById("precipitation").innerHTML = rain + "%";
         document.getElementById("day").innerHTML = Math.round(temp) + '<span class="unitx"><span class="cel"><sup>&#8451;</sup></span></span>';
         document.getElementById("day1").innerHTML = Math.round(daytemp[1]) + '<span class="unitx"><span class="cel"><sup>&#8451;</sup></span></span>';
         document.getElementById("day2").innerHTML = Math.round(daytemp[2]) + '<span class="unitx"><span class="cel"><sup>&#8451;</sup></span></span>';
         document.getElementById("day3").innerHTML = lastDay + '<span class="unitx"><span class="cel"><sup>&#8451;</sup></span></span>';
-        document.getElementById("daytwo").innerHTML = dayOfWeek[daynum + 2];
-        document.getElementById("daythree").innerHTML = dayOfWeek[daynum + 3];
+        document.getElementById("daytwo").innerHTML = dayOfWeek[(daynum + 2)%7];
+        document.getElementById("daythree").innerHTML = dayOfWeek[(daynum + 3)%7];
 
         document.getElementById("uv-index").innerHTML = uv;
         var perct = uv * 10;
@@ -203,13 +203,13 @@ function getValues(city = "New Delhi") {
 
     //AirQuality Index api Call
     const aqi = new XMLHttpRequest();
-    const urlaqi = 'http://api.airvisual.com/v2/city?city=' + `${city}` + '&state=' + `${dict[city].state}` + '&country=' + `${dict[city].country}` + '&key=58535385-a3a3-4622-af58-d2c51254a9cb';
+    const urlaqi = "https://api.waqi.info/feed/" + `${city}` + "/?token=46b6b9160865cef800dde9b691d76cf2dea5cd40";
     aqi.open("GET", urlaqi);
     aqi.send();
 
     aqi.onload = (e) => {
         var resaqi = JSON.parse(aqi.responseText);
-        var aqi_val = resaqi.data.current.pollution.aqius
+        var aqi_val = resaqi.data.aqi;
         // console.log(resaqi)
         console.log(aqi_val);
 
