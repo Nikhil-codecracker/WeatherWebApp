@@ -9,7 +9,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Domine:wght@500&display=swap" rel="stylesheet">
   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.6/css/boxicons.min.css' rel='stylesheet'>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeESyxuRqSIk1SNCy3PyqSy9AtBOSR-OI&callback=initMap&libraries=&v=weekly"
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeESyxuRqSIk1SNCy3PyqSy9AtBOSR-OI&callback=initMap&libraries=&v=weekly"
     defer></script>
 </head>
 
@@ -208,7 +209,7 @@
         </div>
         <!-- Map Function -->
         <div id="map">
-          
+
         </div>
       </div>
       <div class="col-sm-4">
@@ -230,7 +231,13 @@
         <h4 class="today mb-2 text-center">Today</h4>
         <div class="row" style="padding: 5px 0;">
           <div class="col-6 ">
-            <img src="images/sun-icon.png" style="width: 40%; margin: 1rem 0rem 0 8rem;">
+            <!--ICON SUN MAIN START-->
+            <div class="anim-icon" style="margin-left:5.5rem;margin-bottom: -1.5rem;">
+              <div class="sunny">
+                <div class="rays"></div>
+              </div>
+            </div>
+            <!--ICON SUN MAIN END-->
           </div>
           <div class="col-6 alignment2">
             <p class="temper" id="today">
@@ -248,16 +255,23 @@
         <!--START OF WEATHER DETAILS (ICONS)-->
         <div class="row">
           <div class="col-4 alignment2">
-            <img src="images/sun-icon.png" style="width: 40%; margin: 0rem 0 0 0rem;">
+            <!--WIND ICON-->
+            <img src="images/wind.png" style="width: 50%; margin: 0rem 0 0 0rem;">
           </div>
           <div class="col-4 alignment2">
-            <img src="images/sun-icon.png" style="width: 40%; margin: 0rem 0 0 0rem;">
+            <!--HUMIDITY ICON-->
+            <img src="images/humidity.png" style="width: 50%; margin: 0rem 0 0 0rem;">
           </div>
           <div class="col-4 alignment2">
-            <img src="images/sun-icon.png" style="width: 40%; margin: 0rem 0 0 0rem;">
+            <!--START OF RAIN ICON-->
+            <div class="anim-icon" style="font-size:0.4em">
+              <div class="cloud"></div>
+              <div class="rain"></div>
+            </div>
+            <!--END OF RAIN ICON-->
           </div>
         </div>
-        <div class="row">
+        <div class="row" style="margin-top:0.3rem">
           <div class="col-4">
             <h6 class="alignment2" id="windspeedright"></h6>
           </div>
@@ -280,7 +294,12 @@
               <div class="card-body">
                 <h6 class="card-subtitle mb-2 text-muted time">Today</h6>
                 <p class="speedx" id="day"></p>
-                <img src="images/sun-icon.png" style="width: 80%; margin: 0rem 0 0 0rem;">
+                <!--START OF CLOUDY ICON-->
+                <div class="anim-icon" style ="font-size: 0.4em;margin-left:-2em;">
+                  <div class="cloud"></div>
+                  <div class="cloud"></div>
+                </div>
+                <!--END OF CLOUDY ICON-->
               </div>
             </div>
           </div>
@@ -289,7 +308,15 @@
               <div class="card-body">
                 <h6 class="card-subtitle mb-2 text-muted time">Tom</h6>
                 <p class="speedx" id="day1"></p>
-                <img src="images/sun-icon.png" style="width: 80%; margin: 0rem 0 0 0rem;">
+                <!--START OF THUNDERSTORM ICON-->
+                <div class="anim-icon" style ="font-size: 0.4em;margin-left:-2em;">
+                  <div class="cloud"></div>
+                  <div class="lightning">
+                    <div class="bolt"></div>
+                    <div class="bolt"></div>
+                  </div>
+                </div>
+                <!--END OF THUNDERSTORM ICON-->
               </div>
             </div>
           </div>
@@ -298,7 +325,15 @@
               <div class="card-body">
                 <h6 class="card-subtitle mb-2 text-muted time" id="daytwo"></h6>
                 <p class="speedx" id="day2"></p>
-                <img src="images/sun-icon.png" style="width: 80%; margin: 0rem 0 0 0rem;">
+                <!--START OF SUN SHOWER ICON-->
+                <div class="anim-icon" style ="font-size: 0.4em;margin-left:-2em;">
+                  <div class="cloud"></div>
+                  <div class="sun">
+                    <div class="rays"></div>
+                  </div>
+                  <div class="rain"></div>
+                </div>
+                <!--END OF SUN SHOWER ICON-->
               </div>
             </div>
           </div>
@@ -307,7 +342,15 @@
               <div class="card-body">
                 <h6 class="card-subtitle mb-2 text-muted time" id="daythree"></h6>
                 <p class="speedx" id="day3"></p>
-                <img src="images/sun-icon.png" style="width: 80%; margin: 0rem 0 0 0rem;">
+                <!--START OF SNOW ICON-->
+                <div class="anim-icon" style ="font-size: 0.4em;margin-left:-2em;">
+                  <div class="cloud"></div>
+                  <div class="snow">
+                    <div class="flake"></div>
+                    <div class="flake"></div>
+                  </div>
+                </div>
+                <!--END OF SNOW ICON-->
               </div>
             </div>
           </div>
@@ -328,3 +371,4 @@
 </body>
 
 </html>
+<!--HELLO WORLD-->
