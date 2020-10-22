@@ -295,6 +295,7 @@ function change(item,index){
         document.getElementById("search").style.display = "none";
 
         getValues(arr[index]);
+        initMap();
     }
 }
 
