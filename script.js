@@ -110,7 +110,7 @@ function getValues(city = "New Delhi") {
         console.log(daytemp)
         var sunrise = daydata.forecastday[0].astro.sunrise;
         var sunset = daydata.forecastday[0].astro.sunset;
-        var rain = daydata.forecastday[0].day.daily_will_it_rain;
+        var rain = daydata.forecastday[0].day.daily_chance_of_rain;
         var time = new Date();
         var daynum = time.getDay();
         var date = time.getDate();
