@@ -109,6 +109,15 @@ a{
   font-size: 1.5rem;
   color:#333866;
 }
+
+.celcius{
+  position: relative;
+  top:0.5rem;
+  margin-top:1rem;
+  font-size: 2rem;
+  color:#333866;
+}
+
 .cardx{
   border: solid #F1F3FF !important;
 }

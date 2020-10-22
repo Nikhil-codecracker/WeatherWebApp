@@ -253,6 +253,7 @@ function locationpage2(city){
         var temp = resp.current.temp_c;
         var cond = resp.current.condition.text;
         document.getElementById(city).innerHTML = temp;
+        document.getElementById(`${city}cond`).innerHTML = cond;
         //console.log(city + cond)
     }
 }
