@@ -78,7 +78,6 @@ var dict = {
     }
 }
 
-
 //Main Call to original Page
 function getValues(city = "New Delhi") {
     const main = new XMLHttpRequest();
@@ -242,6 +241,21 @@ function getValues(city = "New Delhi") {
 
 
 getValues();
+
+function locationpage2(city){
+    const resText = new XMLHttpRequest();
+    const urlweather = 'https://api.weatherapi.com/v1/forecast.json?key=b237bbd52a554e65b4b62837202010&q=' + `${city}`;
+    resText.open("GET", urlweather);
+    resText.send();
+
+    resText.onload = (e) =>{
+        var resp = JSON.parse(resText.responseText);
+        var temp = resp.current.temp_c;
+        var cond = resp.current.condition.text;
+        document.getElementById(city).innerHTML = temp;
+        console.log("Temp" + temp)
+    }
+}
 
 document.getElementById("location").onclick = () =>{
     document.getElementById("innerconsole").style.display = "none";
