@@ -27,17 +27,17 @@
         </div>
         <div class="row">
           <div class="col-12 ">
-            <a href="#dashboard" class="nav"><i class="bx bxs-dashboard ico"></i> Dashboard</a>
+            <a href="#dashboard" class="nav" id="dashboard"><i class="bx bxs-dashboard ico"></i> Dashboard</a>
           </div>
         </div>
         <div class="row">
           <div class="col-12 ">
-            <a href="#home" class="nav"><i class="bx bxs-map ico"></i> Location</a>
+            <a href="#home" class="nav" id="location"><i class="bx bxs-map ico"></i> Location</a>
           </div>
         </div>
         <div class="row">
           <div class="col-12 ">
-            <a href="#home" class="nav"><i class="bx bxs-map-alt ico"></i> Map</a>
+            <a href="#home" class="nav" id="Map"><i class="bx bxs-map-alt ico"></i> Map</a>
           </div>
         </div>
         <div class="row">
@@ -47,85 +47,106 @@
         </div>
       </div>
       <div class="col-sm-5 highlight">
-        <h4 style="margin-top: 1rem;">Today's Highlights</h4>
-        <div class="row" style="height:30%;">
-          <div class="col-6 alignment2">
-            <div class="card" style="width: 18rem; ">
-              <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">Ultra-Violet Index</h6>
-                <div class="progress">
-                  <div class="progress-bar bg-warning" id="bar" style="width:0%"></div>
+        <div id="innerconsole">
+          <h4 style="margin-top: 1rem;">Today's Highlights</h4>
+          <div class="row" style="height:30%;">
+            <div class="col-6 alignment2">
+              <div class="card" style="width: 18rem; ">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted">Ultra-Violet Index</h6>
+                  <div class="progress">
+                    <div class="progress-bar bg-warning" id="bar" style="width:0%"></div>
+                  </div>
+                  <h5 class="card-title" style="text-align: center;" id="uv-index"><strong></strong></h5>
+                  <p class="card-text" style="font-size: 0.9rem;" id="uv-desc"></p>
                 </div>
-                <h5 class="card-title" style="text-align: center;" id="uv-index"><strong></strong></h5>
-                <p class="card-text" style="font-size: 0.9rem;" id="uv-desc"></p>
+              </div>
+            </div>
+            <div class="col-6 alignment2">
+              <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted">Sunrise and Sunset</h6>
+                  <div class="row" style="padding: 5px 0;">
+                    <div class="col-6">
+                      <span class="iconify sun" data-icon="wi-sunrise" data-inline="false"
+                        style="color: orange; font-size: 3rem;"></span>
+                    </div>
+                    <div class="col-6 alignment2">
+                      <h5 class="card-title" id="sunrise" style="font-size: 1rem;"></h5>
+                    </div>
+                  </div>
+                  <div class="row" style="padding: 5px 0;">
+                    <div class="col-6">
+                      <span class="iconify" data-icon="wi-sunset" data-inline="false"
+                        style="color: orange; font-size: 3.5rem;"></span>
+                    </div>
+                    <div class="col-6 alignment2">
+                      <h5 class="card-title" id="sunset" style="font-size: 1rem;"></h5>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-6 alignment2">
-            <div class="card" style="width: 18rem;">
-              <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">Sunrise and Sunset</h6>
-                <div class="row" style="padding: 5px 0;">
-                  <div class="col-6">
-                    <span class="iconify sun" data-icon="wi-sunrise" data-inline="false"
-                      style="color: orange; font-size: 3rem;"></span>
-                  </div>
-                  <div class="col-6 alignment2">
-                    <h5 class="card-title" id="sunrise" style="font-size: 1rem;"></h5>
-                  </div>
+          <div class="row" style="height:30%;">
+            <div class="col-6 alignment2">
+              <div class="card" style="width: 18rem; ">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted">Wind Status</h6>
+                  <p class="speed"><strong id="wind-speed"></strong><span class="unit">km/h</span></p>
+                  <h6 id="wind-dir">WSW</h6>
                 </div>
-                <div class="row" style="padding: 5px 0;">
-                  <div class="col-6">
-                    <span class="iconify" data-icon="wi-sunset" data-inline="false"
-                      style="color: orange; font-size: 3.5rem;"></span>
-                  </div>
-                  <div class="col-6 alignment2">
-                    <h5 class="card-title" id="sunset" style="font-size: 1rem;"></h5>
-                  </div>
+              </div>
+            </div>
+            <div class="col-6 alignment2">
+              <div class="card" style="width: 18rem; ">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted">Visibility</h6>
+                  <p class="speed"><strong id="vis-val"></strong><span class="unit">km</span></p>
+                  <h6 id="vis-status">Average</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="height:30%;">
+            <div class="col-6 alignment2">
+              <div class="card" style="width: 18rem; ">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted">Humidity</h6>
+                  <p class="speed" ><strong id="humidity"></strong><span class="unit">%</span></p>
+                  <h6 id="humidity-status"></h6>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 alignment2">
+              <div class="card" style="width: 18rem; ">
+                <div class="card-body">
+                  <h6 class="card-subtitle mb-2 text-muted">Air Quality</h6>
+                  <p class="speed" ><strong id="aqi-val">152</strong></p>
+                  <h6 id="aqi-status">Unhealthy</h6>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="row" style="height:30%;">
-          <div class="col-6 alignment2">
-            <div class="card" style="width: 18rem; ">
-              <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">Wind Status</h6>
-                <p class="speed"><strong id="wind-speed"></strong><span class="unit">km/h</span></p>
-                <h6 id="wind-dir">WSW</h6>
-              </div>
+        <div id="search">
+          <div class="con-search notValue">
+            <div class="con-input">
+                <input
+                    onblur="handleBlur()"
+                    onfocus="handleFocus(event)"
+                    placeholder="Search Object"
+                    oninput="handleSearch(event)"
+                    type="text">
+                <i class="bx bx-search"></i>
+                <i onclick="handleRemove()" class="bx bx-x"></i>
             </div>
-          </div>
-          <div class="col-6 alignment2">
-            <div class="card" style="width: 18rem; ">
-              <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">Visibility</h6>
-                <p class="speed"><strong id="vis-val"></strong><span class="unit">km</span></p>
-                <h6 id="vis-status">Average</h6>
-              </div>
+            <div class="content-results">
+                <div class="con-results">
+                    <div class="not-results">Not Results</div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="row" style="height:30%;">
-          <div class="col-6 alignment2">
-            <div class="card" style="width: 18rem; ">
-              <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">Humidity</h6>
-                <p class="speed" ><strong id="humidity"></strong><span class="unit">%</span></p>
-                <h6 id="humidity-status"></h6>
-              </div>
-            </div>
-          </div>
-          <div class="col-6 alignment2">
-            <div class="card" style="width: 18rem; ">
-              <div class="card-body">
-                <h6 class="card-subtitle mb-2 text-muted">Air Quality</h6>
-                <p class="speed" ><strong id="aqi-val">152</strong></p>
-                <h6 id="aqi-status">Unhealthy</h6>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
       <div class="col-sm-4">
