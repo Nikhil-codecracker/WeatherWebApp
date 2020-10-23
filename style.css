@@ -386,7 +386,7 @@ animation: cloud 4s linear infinite;
 }
 .cloud:nth-child(2):after { background: #fff; }
 
-.cloud + .sun {
+.cloud + .sunny {
 margin: -2em 1em;
 }
 
