@@ -525,6 +525,7 @@ function renderResults(results, value) {
   results.forEach((result) => {
     const resultElement = document.createElement('div')
     resultElement.className = 'result'
+    resultElement.id = result.name + result.country
     const title = document.createElement('h5')
     const text = document.createElement('p')
     const web = document.createElement('div')
@@ -558,3 +559,16 @@ function initMap() {
     map: map,
   });
 }
+
+setInterval(()=>{
+  var cities = document.querySelectorAll('.result');
+  console.log(cities)
+  for(var i=0;i<cities.length;i++){
+    document.getElementById(cities[i].id).addEventListener("click",function(){
+      console.log("123")
+      document.getElementById("innerconsole").style.display = "block";
+      document.getElementById("search").style.display = "none";
+
+    })
+  }
+})
