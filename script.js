@@ -583,7 +583,7 @@ function locationpage2(city) {
   }
 }
 
-var arr = ["Delhi", "London", "Paris", "New York", "Mumbai", "Kolkata"]
+var arr = ["New Delhi", "London", "Paris", "New York City", "Mumbai", "Kolkata"]
 arr.forEach(locationpage2);
 
 document.getElementById("location").onclick = () => {
