@@ -241,7 +241,8 @@ function getValues(city = "New Delhi") {
 
     document.getElementById("city").innerHTML = city;
     document.getElementById("country").innerHTML = dict[city].country;
-
+    var url = "images/" + `${dict[city].country.toLowerCase()}` + '.png';
+    document.getElementById('country-image').src = url;
 }
 
 
