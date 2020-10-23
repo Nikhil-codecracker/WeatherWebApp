@@ -270,19 +270,25 @@ document.getElementById("location").onclick = () =>{
     document.getElementById("innerconsole").style.display = "none";
     document.getElementById("search").style.display = "block";
     document.getElementById("map").style.display = "none";
-    
+    document.getElementById("about-space").style.display = "none";
 }
 
 document.getElementById("dashboard").onclick = () =>{
     document.getElementById("innerconsole").style.display = "block";
     document.getElementById("search").style.display = "none";
     document.getElementById("map").style.display = "none";
+    document.getElementById("about-space").style.display = "none";
 }
 
 document.getElementById("Map").onclick = () =>{
     document.getElementById("innerconsole").style.display = "none";
     document.getElementById("search").style.display = "none";
     document.getElementById("map").style.display = "block";
+    document.getElementById("about-space").style.display = "none";
+}
+document.getElementById("about").onclick = () =>{
+  document.getElementById("main-container").style.display = "none";
+  document.getElementById("about-space").style.display = "block";
 }
 
 var cards = ["card1","card2","card3","card4","card5","card6"]
@@ -634,5 +640,3 @@ function initMap() {
       map: map,
     });
   }
-
-
