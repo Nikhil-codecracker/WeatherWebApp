@@ -585,7 +585,7 @@ function searchcity(city,index){
   }
 }
 
-window.onload = function () { 
+function Load() { 
   document.getElementById("loader-div").style.display="none";
   document.getElementById("main-container").style.display="block";
  }
