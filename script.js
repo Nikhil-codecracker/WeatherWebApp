@@ -578,6 +578,7 @@ function searchcity(city,index){
   document.getElementById(id).onclick = function(){
     document.getElementById("innerconsole").style.display = "block";
     document.getElementById("search").style.display = "none";
+    document.getElementById("inp").value = '';
 
     getValues(city.name);
   }
