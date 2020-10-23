@@ -334,6 +334,76 @@ function change(item,index){
     }
 }
 
+const dict2 = [
+  {
+      "name": "New Delhi",
+      "state": "Delhi",
+      "country": "India",
+  },
+  {
+      "name": "Mumbai",
+      "state": "Maharashtra",
+      "country": "India",
+  },
+  {
+      "name": "Kolkata",
+      "state": "West Bengak",
+      "country": "India",
+  },
+  {
+      "name": "Chennai",
+      "state": "Tamil Nadu",
+      "country": "India",
+  },
+  {
+      "name": "Banglore",
+      "state": "Karnataka",
+      "country": "India",
+  },
+  {
+      "name": "Paris",
+      "state": "ile-de-france",
+      "country": "France",
+  },
+  {
+      "name": "New York City",
+      "state": "New York",
+      "country": "USA",
+  },
+  {
+      "name": "Tokyo",
+      "state": "Tokyo",
+      "country": "Japan",
+  },
+  {
+      "name": "London",
+      "state": "England",
+      "country": "UK",
+  },
+  {
+      "name": "Adelaide",
+      "state": "South Australia",
+      "country": "Australia",
+  },
+
+  {
+      "name": "Melbourne",
+      "state": "Victoria",
+      "country": "Australia",
+  },
+
+  {
+      "name": "Cape Town",
+      "state": "Western Cape",
+      "country": "South Africa",
+  },
+
+  {
+      "name": "Amsterdam",
+      "state": "North Holland",
+      "country": "Netherlands",
+  }
+]
 const users = [
     {
         "id": 0,
@@ -606,15 +676,13 @@ function handleBlur() {
 
 function handleSearch(evt) {
     const value = evt.target.value
-    const newUsers = users.filter((user) => {
-        delete user.address
-        delete user.company
-        delete user.phone
-        delete user.id
-        delete user.username
-        const string = JSON.stringify(user).toLowerCase()
+    const newUsers = dict2.filter((dict2) => {
+        // delete dict2.name
+        // delete dict2.state
+        // delete dict2.country
+        const string = JSON.stringify(dict2).toLowerCase()
         if (string.indexOf(value.toLowerCase()) !== -1) {
-            return user
+            return dict2
         }
     })
     renderResults(newUsers, value)
@@ -643,8 +711,8 @@ function renderResults(results, value) {
         web.className = 'web'
         const capitalize = Capitalize(result.name)
         title.innerHTML = capitalize.replace(value, `<b>${value}</b>`)
-        text.innerHTML = result.email.toLowerCase().replace(value, `<b>${value}</b>`)
-        web.innerHTML = result.website.toLowerCase().replace(value, `<b>${value}</b>`)
+        text.innerHTML = result.state.toLowerCase().replace(value, `<b>${value}</b>`)
+        web.innerHTML = result.country.toLowerCase().replace(value, `<b>${value}</b>`)
         resultElement.appendChild(title)
         resultElement.appendChild(text)
         resultElement.appendChild(web)
