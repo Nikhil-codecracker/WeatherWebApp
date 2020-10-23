@@ -621,12 +621,6 @@ animation: spin 16s linear infinite reverse;
   padding: 0.5rem 1rem;
   font-size: 12px;
 }
-.carda .actionsa {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
-  padding: 0.5rem 1rem;
-}
 .carda svg {
   width: 85px;
   height: 85px;
@@ -669,17 +663,4 @@ path {
   background-image: url("https://m.media-amazon.com/images/S/aplus-media/vc/cab6b08a-dd8f-4534-b845-e33489e91240._CR75,0,300,300_PT0_SX300__.jpg");
   background-position: bottom center;
   background-size: cover;
-}
-
-button {
-  border: none;
-  background: none;
-  font-size: 24px;
-  color: #8bc34a;
-  cursor: pointer;
-  transition:.5s;
-  &:hover{
-    color: #4CAF50  ;
-    transform: rotate(22deg)
-  }
 }
