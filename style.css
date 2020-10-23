@@ -4,6 +4,7 @@ body {
   font-family: "Lato", sans-serif;
   color: #333866 !important;
   outline:none;
+  overflow-x: hidden;
 }
 .container{
   margin: 4rem 0;

@@ -291,6 +291,36 @@ document.getElementById("about").onclick = () =>{
   document.getElementById("about-space").style.display = "block";
 }
 
+
+
+document.getElementById("loc2").onclick = () =>{
+  document.getElementById("main-container").style.display = "block";
+  document.getElementById("innerconsole").style.display = "none";
+  document.getElementById("search").style.display = "block";
+  document.getElementById("map").style.display = "none";
+  document.getElementById("about-space").style.display = "none";
+}
+
+document.getElementById("dash2").onclick = () =>{
+  document.getElementById("main-container").style.display = "block";
+  document.getElementById("innerconsole").style.display = "block";
+  document.getElementById("search").style.display = "none";
+  document.getElementById("map").style.display = "none";
+  document.getElementById("about-space").style.display = "none";
+}
+
+document.getElementById("map2").onclick = () =>{
+  document.getElementById("main-container").style.display = "block";
+  document.getElementById("innerconsole").style.display = "none";
+  document.getElementById("search").style.display = "none";
+  document.getElementById("map").style.display = "block";
+  document.getElementById("about-space").style.display = "none";
+}
+document.getElementById("about2").onclick = () =>{
+document.getElementById("main-container").style.display = "none";
+document.getElementById("about-space").style.display = "block";
+}
+
 var cards = ["card1","card2","card3","card4","card5","card6"]
 
 cards.forEach(change);
