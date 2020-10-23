@@ -507,6 +507,34 @@ opacity: 0.4;
 animation: spin 16s linear infinite reverse;
 }
 
+.fog {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 1.75em 0 0 0;
+}
+
+.fog::before,
+.fog::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 5em;
+  height: 0.5em;
+  margin-left: -2.5em;
+  color: rgb(199, 197, 197);
+  background: currentColor;
+  border-radius: 0.5em;
+  animation: fog 6s infinite linear alternate;
+}
+
+.fog::before { top: 0.75em; }
+
+.fog::after {
+  top: 1.5em;
+  animation-delay: -6s;
+}
+
 @keyframes rain {
 0% {
   background: rgb(4, 171, 212);
@@ -561,4 +589,9 @@ animation: spin 16s linear infinite reverse;
   opacity: 0;
   transform: scale(0.5) translate(-200%, -3em);
 }
+}
+
+@keyframes fog {
+  0% { transform: translateX(-0.5em); }
+  100% { transform: translateX(0.5em); }
 }
