@@ -32,7 +32,7 @@ var dict = {
   },
   "Kolkata": {
     "name": "Kolkata",
-    "state": "West Bengak",
+    "state": "West Bengal",
     "country": "India",
   },
   "Chennai": {
@@ -187,7 +187,7 @@ const dict2 = [
   },
   {
     "name": "Kolkata",
-    "state": "West Bengak",
+    "state": "West Bengal",
     "country": "India",
   },
   {
