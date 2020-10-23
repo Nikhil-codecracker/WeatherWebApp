@@ -98,8 +98,8 @@ var dict = {
     "state": "Mexico",
     "country": "Mexico"
   },
-  "Bejing": {
-    "name": "Bejing",
+  "Beijing": {
+    "name": "Beijing",
     "state": "Hebei",
     "country": "China"
   },
@@ -172,6 +172,186 @@ var dict = {
     "name": "Bhopal",
     "state": "Madhya Pradesh",
     "country": "India"
+  },
+  "Osaka-Shi":{
+    "name": "Osaka-Shi",
+    "state": "Osaka",
+    "country": "Japan"
+  },
+  "Dhaka":{
+    "name": "Dhaka",
+    "state": "Dhaka",
+    "country": "Bangladesh"
+  },
+  "Sydney":{
+    "name": "Sydney",
+    "state": "New South Wales",
+    "country": "Australia"
+  },
+  "Sydney":{
+    "name": "Sydney",
+    "state": "Australian Capital Territory",
+    "country": "Australia"
+  },
+  "Ottawa":{
+    "name": "Ottawa",
+    "state": "Ontario",
+    "country": "Canada"
+  },
+  "Toronto":{
+    "name": "Toronto",
+    "state": "Ontario",
+    "country": "Canada"
+  },
+  "Birmingham":{
+    "name": "Birmingham",
+    "state": "West Midlands",
+    "country": "UK"
+  },
+  "Kuala Lumpur":{
+    "name": "Kuala Lumpur",
+    "state": "Kuala Lumpur",
+    "country": "Malaysia"
+  },
+  "Casablanca":{
+    "name": "Casablanca",
+    "state": "Casablanca",
+    "country": "Morocco"
+  },
+  "Rome":{
+    "name": "Rome",
+    "state": "Lazio",
+    "country": "Italy"
+  },
+  "Bern":{
+    "name": "Bern",
+    "state": "Bern",
+    "country": "Switzerland"
+  },
+  "Berlin":{
+    "name": "Berlin",
+    "state": "Berlin",
+    "country": "Germany"
+  },
+  "Dubai":{
+    "name": "Dubai",
+    "state": "Dubai",
+    "country": "UAE"
+  },
+  "Rio De Janeiro":{
+    "name": "Rio De Janeiro",
+    "state": "Rio De Janeiro",
+    "country": "Brazil"
+  },
+  "Shimla":{
+    "name": "Shimla",
+    "state": "Himachal Pradesh",
+    "country": "India"
+  },
+  "Patna":{
+    "name": "Patna",
+    "state": "Bihar",
+    "country": "India"
+  },
+  "Cairo":{
+    "name": "Cairo",
+    "state": "Al Qahirah",
+    "country": "Egypt"
+  },
+  "Reykjavík":{
+    "name": "Reykjavík",
+    "state": "Gullbringusysla",
+    "country": "Iceland"
+  },
+  "Agra":{
+    "name": "Agra",
+    "state": "Uttar Pradesh",
+    "country": "India"
+  },
+  "Ahmedabad":{
+    "name": "Ahmedabad",
+    "state": "Gujrat",
+    "country": "India"
+  },
+  "Amritsar":{
+    "name": "Amritsar",
+    "state": "Punjab",
+    "country": "India"
+  },
+  "Kangra":{
+    "name": "Kangra",
+    "state": "Himachal Pradesh",
+    "country": "India"
+  },
+  "Kanpur":{
+    "name": "Kanpur",
+    "state": "Uttar Pradesh",
+    "country": "India"
+  },
+  "Ranchi":{
+    "name": "Ranchi",
+    "state": "Jharkhand",
+    "country": "India"
+  },
+  "Shillong":{
+    "name": "Shillong",
+    "state": "Meghalaya",
+    "country": "India"
+  },
+  "Kavaratti":{
+    "name": "Kavaratti",
+    "state": "Lakshadweep",
+    "country": "India"
+  },
+  "Glasgow":{
+    "name": "Glasgow",
+    "state": "Glasgow City",
+    "country": "UK"
+  },
+  "Mecca":{
+    "name": "Mecca",
+    "state": "Makkah",
+    "country": "Saudi Arabia"
+  },
+  "Port Blair":{
+    "name": "Port Blair",
+    "state": "Andaman and Nicobar Island",
+    "country": "India"
+  },
+  "Pondicherry":{
+    "name": "Pondicherry",
+    "state": "Pudducherry",
+    "country": "India"
+  },
+  "Vienna":{
+    "name": "Vienna",
+    "state": "Wein",
+    "country": "Austria"
+  },
+  "Las Vegas":{
+    "name": "Las Vegas",
+    "state": "Nevada",
+    "country": "USA"
+  },
+  "Washingotn":{
+    "name": "Washington",
+    "state": "District of Columbia",
+    "country": "USA"
+  },
+  "Los Angeles":{
+    "name": "Los Angeles",
+    "state": "California",
+    "country": "USA"
+  },
+  "Seattle":{
+    "name": "Seattle",
+    "state": "Washington",
+    "country": "USA"
+  },
+  "Budapest":{
+    "name": "Budapest",
+    "state": "Budapest",
+    "country": "Hungry"
   },
 }
 const dict2 = [
@@ -254,7 +434,7 @@ const dict2 = [
     "country": "Mexico"
   },
   {
-    "name": "Bejing",
+    "name": "Beijing",
     "state": "Hebei",
     "country": "China"
   },
@@ -327,6 +507,186 @@ const dict2 = [
     "name": "Bhopal",
     "state": "Madhya Pradesh",
     "country": "India"
+  },
+  {
+    "name": "Osaka-Shi",
+    "state": "Osaka",
+    "country": "Japan"
+  },
+  {
+    "name": "Dhaka",
+    "state": "Dhaka",
+    "country": "Bangladesh"
+  },
+  {
+    "name": "Sydney",
+    "state": "New South Wales",
+    "country": "Australia"
+  },
+  {
+    "name": "Sydney",
+    "state": "Australian Capital Territory",
+    "country": "Australia"
+  },
+  {
+    "name": "Ottawa",
+    "state": "Ontario",
+    "country": "Canada"
+  },
+  {
+    "name": "Toronto",
+    "state": "Ontario",
+    "country": "Canada"
+  },
+  {
+    "name": "Birmingham",
+    "state": "West Midlands",
+    "country": "UK"
+  },
+  {
+    "name": "Kuala Lumpur",
+    "state": "Kuala Lumpur",
+    "country": "Malaysia"
+  },
+  {
+    "name": "Casablanca",
+    "state": "Casablanca",
+    "country": "Morocco"
+  },
+  {
+    "name": "Rome",
+    "state": "Lazio",
+    "country": "Italy"
+  },
+  {
+    "name": "Bern",
+    "state": "Bern",
+    "country": "Switzerland"
+  },
+  {
+    "name": "Berlin",
+    "state": "Berlin",
+    "country": "Germany"
+  },
+  {
+    "name": "Dubai",
+    "state": "Dubai",
+    "country": "UAE"
+  },
+  {
+    "name": "Rio De Janeiro",
+    "state": "Rio De Janeiro",
+    "country": "Brazil"
+  },
+  {
+    "name": "Shimla",
+    "state": "Himachal Pradesh",
+    "country": "India"
+  },
+  {
+    "name": "Patna",
+    "state": "Bihar",
+    "country": "India"
+  },
+  {
+    "name": "Cairo",
+    "state": "Al Qahirah",
+    "country": "Egypt"
+  },
+  {
+    "name": "Reykjavík",
+    "state": "Gullbringusysla",
+    "country": "Iceland"
+  },
+  {
+    "name": "Agra",
+    "state": "Uttar Pradesh",
+    "country": "India"
+  },
+  {
+    "name": "Ahmedabad",
+    "state": "Gujrat",
+    "country": "India"
+  },
+  {
+    "name": "Amritsar",
+    "state": "Punjab",
+    "country": "India"
+  },
+  {
+    "name": "Kangra",
+    "state": "Himachal Pradesh",
+    "country": "India"
+  },
+  {
+    "name": "Kanpur",
+    "state": "Uttar Pradesh",
+    "country": "India"
+  },
+  {
+    "name": "Ranchi",
+    "state": "Jharkhand",
+    "country": "India"
+  },
+  {
+    "name": "Shillong",
+    "state": "Meghalaya",
+    "country": "India"
+  },
+  {
+    "name": "Kavaratti",
+    "state": "Lakshadweep",
+    "country": "India"
+  },
+  {
+    "name": "Glasgow",
+    "state": "Glasgow City",
+    "country": "UK"
+  },
+  {
+    "name": "Mecca",
+    "state": "Makkah",
+    "country": "Saudi Arabia"
+  },
+  {
+    "name": "Port Blair",
+    "state": "Andaman and Nicobar Island",
+    "country": "India"
+  },
+  {
+    "name": "Pondicherry",
+    "state": "Pudducherry",
+    "country": "India"
+  },
+  {
+    "name": "Vienna",
+    "state": "Wein",
+    "country": "Austria"
+  },
+  {
+    "name": "Las Vegas",
+    "state": "Nevada",
+    "country": "USA"
+  },
+  {
+    "name": "Washington",
+    "state": "District of Columbia",
+    "country": "USA"
+  },
+  {
+    "name": "Los Angeles",
+    "state": "California",
+    "country": "USA"
+  },
+  {
+    "name": "Seattle",
+    "state": "Washington",
+    "country": "USA"
+  },
+  {
+    "name": "Budapest",
+    "state": "Budapest",
+    "country": "Hungry"
   },
 ]
 
