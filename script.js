@@ -121,7 +121,7 @@ var dict = {
   "Chicago":{
     "name": "Chicago",
     "state": "Illinois",
-    "country": "US"
+    "country": "USA"
   },
   "Madrid":{
     "name": "Madrid",
@@ -276,7 +276,7 @@ const dict2 = [
   {
     "name": "Chicago",
     "state": "Illinois",
-    "country": "US"
+    "country": "USA"
   },
   {
     "name": "Madrid",
