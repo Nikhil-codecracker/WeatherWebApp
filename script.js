@@ -87,8 +87,209 @@ var dict = {
     "name": "Amsterdam",
     "state": "North Holland",
     "country": "Netherlands",
-  }
+  },
+  "Shanghai":{
+    "name": "Shanghai",
+    "state": "Eastern China",
+    "country": "China"
+  },
+  "Mexico":{
+    "name": "Mexico City",
+    "state": "Mexico",
+    "country": "Mexico"
+  },
+  "Bejing":{
+    "name": "Bejing",
+    "state": "Hebei",
+    "country": "China"
+  },
+  "Moscow":{
+    "name": "Moscow",
+    "state": "Moscow City",
+    "country": "Russia"
+  },
+  "Seoul":{
+    "name": "Seoul",
+    "state": "NA",
+    "country": "South Korea"
+  },
+  "Bangkok":{
+    "name": "Bangkok",
+    "state": "Krung Thep",
+    "country": "Thailand"
+  },
+  "Chicago":{
+    "name": "Chicago",
+    "state": "Illinois",
+    "country": "US"
+  },
+  "Madrid":{
+    "name": "Madrid",
+    "state": "Madrid",
+    "country": "Spain"
+  },
+  "Singapore":{
+    "name": "Singapore",
+    "state": "NA",
+    "country": "Singapore"
+  },
+  "Barcelona":{
+    "name": "Barcelona",
+    "state": "Catalonia",
+    "country": "Spain"
+  },
+  "Jaipur":{
+    "name": "Jaipur",
+    "state": "Rajasthan",
+    "country": "India"
+  },
+  "Hyderabad":{
+    "name": "Hyderabad",
+    "state": "Andhra Pradesh",
+    "country": "India"
+  },
+  "Pune":{
+    "name": "Pune",
+    "state": "Maharashtra",
+    "country": "India"
+  },
 }
+const dict2 = [
+  {
+    "name": "New Delhi",
+    "state": "Delhi",
+    "country": "India",
+  },
+  {
+    "name": "Mumbai",
+    "state": "Maharashtra",
+    "country": "India",
+  },
+  {
+    "name": "Kolkata",
+    "state": "West Bengak",
+    "country": "India",
+  },
+  {
+    "name": "Chennai",
+    "state": "Tamil Nadu",
+    "country": "India",
+  },
+  {
+    "name": "Banglore",
+    "state": "Karnataka",
+    "country": "India",
+  },
+  {
+    "name": "Paris",
+    "state": "ile-de-france",
+    "country": "France",
+  },
+  {
+    "name": "New York City",
+    "state": "New York",
+    "country": "USA",
+  },
+  {
+    "name": "Tokyo",
+    "state": "Tokyo",
+    "country": "Japan",
+  },
+  {
+    "name": "London",
+    "state": "England",
+    "country": "UK",
+  },
+  {
+    "name": "Adelaide",
+    "state": "South Australia",
+    "country": "Australia",
+  },
+
+  {
+    "name": "Melbourne",
+    "state": "Victoria",
+    "country": "Australia",
+  },
+
+  {
+    "name": "Cape Town",
+    "state": "Western Cape",
+    "country": "South Africa",
+  },
+
+  {
+    "name": "Amsterdam",
+    "state": "North Holland",
+    "country": "Netherlands",
+  },
+  {
+    "name": "Shanghai",
+    "state": "Eastern China",
+    "country": "China"
+  },
+  {
+    "name": "Mexico City",
+    "state": "Mexico",
+    "country": "Mexico"
+  },
+  {
+    "name": "Bejing",
+    "state": "Hebei",
+    "country": "China"
+  },
+  {
+    "name": "Moscow",
+    "state": "Moscow City",
+    "country": "Russia"
+  },
+  {
+    "name": "Seoul",
+    "state": "NA",
+    "country": "South Korea"
+  },
+  {
+    "name": "Bangkok",
+    "state": "Krung Thep",
+    "country": "Thailand"
+  },
+  {
+    "name": "Chicago",
+    "state": "Illinois",
+    "country": "US"
+  },
+  {
+    "name": "Madrid",
+    "state": "Madrid",
+    "country": "Spain"
+  },
+  {
+    "name": "Singapore",
+    "state": "NA",
+    "country": "Singapore"
+  },
+  {
+    "name": "Barcelona",
+    "state": "Catalonia",
+    "country": "Spain"
+  },
+  {
+    "name": "Jaipur",
+    "state": "Rajasthan",
+    "country": "India"
+  },
+  {
+    "name": "Hyderabad",
+    "state": "Andhra Pradesh",
+    "country": "India"
+  },
+  {
+    "name": "Pune",
+    "state": "Maharashtra",
+    "country": "India"
+  },
+  
+]
 
 //Main Call to original Page
 function getValues(city = "New Delhi") {
@@ -416,77 +617,6 @@ function change(item, index) {
 
 var dict3;
 
-const dict2 = [
-  {
-    "name": "New Delhi",
-    "state": "Delhi",
-    "country": "India",
-  },
-  {
-    "name": "Mumbai",
-    "state": "Maharashtra",
-    "country": "India",
-  },
-  {
-    "name": "Kolkata",
-    "state": "West Bengak",
-    "country": "India",
-  },
-  {
-    "name": "Chennai",
-    "state": "Tamil Nadu",
-    "country": "India",
-  },
-  {
-    "name": "Banglore",
-    "state": "Karnataka",
-    "country": "India",
-  },
-  {
-    "name": "Paris",
-    "state": "ile-de-france",
-    "country": "France",
-  },
-  {
-    "name": "New York City",
-    "state": "New York",
-    "country": "USA",
-  },
-  {
-    "name": "Tokyo",
-    "state": "Tokyo",
-    "country": "Japan",
-  },
-  {
-    "name": "London",
-    "state": "England",
-    "country": "UK",
-  },
-  {
-    "name": "Adelaide",
-    "state": "South Australia",
-    "country": "Australia",
-  },
-
-  {
-    "name": "Melbourne",
-    "state": "Victoria",
-    "country": "Australia",
-  },
-
-  {
-    "name": "Cape Town",
-    "state": "Western Cape",
-    "country": "South Africa",
-  },
-
-  {
-    "name": "Amsterdam",
-    "state": "North Holland",
-    "country": "Netherlands",
-  }
-]
-
 const conSearch = document.querySelector('.con-search')
 function handleRemove() {
   conSearch.querySelector('input').value = ''
@@ -583,3 +713,4 @@ function searchcity(city,index){
     getValues(city.name);
   }
 }
+initMap();
