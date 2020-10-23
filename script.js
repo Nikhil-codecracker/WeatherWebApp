@@ -17,6 +17,8 @@ var snowy = ["Patchy snow possible", "Blowing snow", "Blizzard", "Patchy sleet p
 var long;
 var latitude;
 
+var searchdone = false;
+
 var dict = {
   "New Delhi": {
     "name": "New Delhi",
@@ -412,6 +414,8 @@ function change(item, index) {
   }
 }
 
+var dict3;
+
 const dict2 = [
   {
     "name": "New Delhi",
@@ -542,6 +546,9 @@ function renderResults(results, value) {
     setTimeout(() => {
       resultElement.classList.remove('hidden')
     }, 20);
+
+    searchdone = true
+    dict3 = results;
   })
 }
 // Initialize and add the map
@@ -561,14 +568,17 @@ function initMap() {
 }
 
 setInterval(()=>{
-  var cities = document.querySelectorAll('.result');
-  console.log(cities)
-  for(var i=0;i<cities.length;i++){
-    document.getElementById(cities[i].id).addEventListener("click",function(){
-      console.log("123")
-      document.getElementById("innerconsole").style.display = "block";
-      document.getElementById("search").style.display = "none";
-
-    })
+  if(searchdone){
+    dict3.forEach(searchcity);
   }
 })
+
+function searchcity(city,index){
+  id = city.name+city.country
+  document.getElementById(id).onclick = function(){
+    document.getElementById("innerconsole").style.display = "block";
+    document.getElementById("search").style.display = "none";
+
+    getValues(city.name);
+  }
+}
