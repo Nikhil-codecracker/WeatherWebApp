@@ -14,27 +14,8 @@
     defer></script>
 </head>
 
-<body onload = "Load()">
-  <div class="outer" id="loader-div">
-    <div class='wrap'>
-      <div class='angle'></div>
-      <div class='angle'></div>
-      <div class='angle'></div>
-      <div class='angle'></div>
-    </div>
-    <svg version='1.1' xmlns='http://www.w3.org/2000/svg'>
-      <defs>
-        <filter id='goo'>
-          <fegaussianblur in='SourceGraphic' result='blur' stddeviation='12'></fegaussianblur>
-          <fecolormatrix in='blur' mode='matrix' result='goo' values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9'>
-          </fecolormatrix>
-          <fecomposite in2='goo' in='SourceGraphic' operator='atop'></fecomposite>
-        </filter>
-      </defs>
-    </svg>
-
-  </div>
-  <div class="container" id="main-container" style="background-color: white; display: none;">
+<body>
+  <div class="container" id="main-container" style="background-color: white;">
     <div class="row alignment2" style="height: 100%;">
       <div class="col-sm-3" style="height:100%">
         <div class="img">
@@ -155,7 +136,7 @@
           <div class="con-search notValue">
             <div class="con-input">
               <input onblur="handleBlur()" onfocus="handleFocus(event)" placeholder="Search Object"
-                oninput="handleSearch(event)" type="text">
+                oninput="handleSearch(event)" type="text" id="inp">
               <i class="bx bx-search"></i>
               <i onclick="handleRemove()" class="bx bx-x"></i>
             </div>
@@ -241,7 +222,7 @@
             <h6 class="day-date" id="date"></h6>
           </div>
           <div class="col-6 alignment2">
-            <img src="images/netherlands.png" style="width: 30%; margin: -0.2rem -4rem 0 0rem;" id="country-image">
+            <img src="images/netherlands.png" style="width: 30%; margin: -0.2rem -4rem 0 0rem;" id = "country-image">
           </div>
         </div>
         <!--END OF TOP DETAILS-->
@@ -251,7 +232,7 @@
         <div class="row" style="padding: 5px 0;">
           <div class="col-6 ">
             <!-- START OF SUN ICON-->
-            <div class="anim-icon" style="margin-left:5.5rem;margin-bottom: -1.5rem;" id="sunny-icon">
+            <div class="anim-icon" style="margin-left:5.5rem;margin-bottom: -1.5rem;" id = "sunny-icon">
               <div class="sunny">
                 <div class="rays"></div>
               </div>
@@ -259,14 +240,14 @@
             <!-- END OF SUN ICON-->
 
             <!--START OF MIST ICON-->
-            <div class="anim-icon" style="margin-left:5.5rem;margin-bottom: -1.5rem;" id="misty-icon">
+            <div class="anim-icon" style="margin-left:5.5rem;margin-bottom: -1.5rem;" id = "misty-icon">
               <div class="cloud"></div>
               <div class="fog"></div>
             </div>
             <!--END OF MIST ICON-->
 
             <!--START OF SNOW ICON-->
-            <div class="anim-icon" style="margin-left:5.5rem;margin-bottom: -1.5rem;" id="snowy-icon">
+            <div class="anim-icon" style="margin-left:5.5rem;margin-bottom: -1.5rem;" id = "snowy-icon">
               <div class="cloud"></div>
               <div class="snow">
                 <div class="flake"></div>
@@ -276,21 +257,21 @@
             <!--END OF SNOW ICON-->
 
             <!--START OF RAIN ICON-->
-            <div class="anim-icon" style="margin-left:5.5rem;margin-bottom: -1.5rem;" id="rainy-icon">
+            <div class="anim-icon" style="margin-left:5.5rem;margin-bottom: -1.5rem;" id = "rainy-icon">
               <div class="cloud"></div>
               <div class="rain"></div>
             </div>
             <!--END OF RAIN ICON-->
 
             <!--START OF CLOUDY ICON-->
-            <div class="anim-icon" style="margin-left:5.5rem;margin-bottom: -1.5rem;" id="cloudy-icon">
+            <div class="anim-icon" style="margin-left:5.5rem;margin-bottom: -1.5rem;" id = "cloudy-icon">
               <div class="cloud"></div>
               <div class="cloud"></div>
             </div>
             <!--END OF CLOUDY ICON-->
 
             <!--START OF THUNDERSTORM ICON-->
-            <div class="anim-icon" style="margin-left:5.5rem;margin-bottom: -1.5rem;" id="thunderstorm-icon">
+            <div class="anim-icon" style="margin-left:5.5rem;margin-bottom: -1.5rem;" id = "thunderstorm-icon">
               <div class="cloud"></div>
               <div class="lightning">
                 <div class="bolt"></div>
@@ -300,7 +281,7 @@
             <!--END OF THUNDERSTORM ICON-->
 
             <!--START OF SUN SHOWER ICON-->
-            <div class="anim-icon" style="margin-left:5.5rem;margin-bottom: -1.5rem;" id="sunCloud-icon">
+            <div class="anim-icon" style="margin-left:5.5rem;margin-bottom: -1.5rem;" id = "sunCloud-icon">
               <div class="cloud"></div>
               <div class="sunny">
                 <div class="rays"></div>
@@ -522,4 +503,3 @@
 </body>
 
 </html>
-<!--HELLO WORLD-->

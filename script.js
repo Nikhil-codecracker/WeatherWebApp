@@ -566,7 +566,6 @@ function initMap() {
     map: map,
   });
 }
-initMap()
 
 setInterval(()=>{
   if(searchdone){
@@ -579,12 +578,8 @@ function searchcity(city,index){
   document.getElementById(id).onclick = function(){
     document.getElementById("innerconsole").style.display = "block";
     document.getElementById("search").style.display = "none";
+    document.getElementById("inp").value = '';
 
     getValues(city.name);
   }
 }
-
-function Load() { 
-  document.getElementById("loader-div").style.display="none";
-  document.getElementById("main-container").style.display="block";
- }
