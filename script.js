@@ -12,7 +12,7 @@ var sunny = ["Sunny", "Clear"];
 var sunCloud = ["Patchy rain possible", "Light drizzle", "Light rain shower", "Light rain", "Patchy light drizzle", "Patchy light rain"];
 var misty = ["Mist", "Overcast", "Fog", "Freezing fog"];
 var cloudy = ["Partly cloudy", "Cloudy"];
-var snowy = ["Patchy snow possible", "Blowing snow", "Blizzard", "Patchy sleet possible", "Light sleet", "Moderate or heavy sleet", "Patchy light snow", "Light snow", "Patchy moderate snow", "Moderate snow", "Patchy heavy snow", "Heavy snow", "Ice pellets", "Light snow showers","Moderate or heavy snow showers","Light showers of ice pellets","Moderate or heavy showers of ice pellets","Patchy light snow with thunder","Moderate or heavy snow with thunder"];
+var snowy = ["Patchy snow possible", "Blowing snow", "Blizzard", "Patchy sleet possible", "Light sleet", "Moderate or heavy sleet", "Patchy light snow", "Light snow", "Patchy moderate snow", "Moderate snow", "Patchy heavy snow", "Heavy snow", "Ice pellets", "Light snow showers", "Moderate or heavy snow showers", "Light showers of ice pellets", "Moderate or heavy showers of ice pellets", "Patchy light snow with thunder", "Moderate or heavy snow with thunder"];
 
 var long;
 var latitude;
@@ -88,87 +88,87 @@ var dict = {
     "state": "North Holland",
     "country": "Netherlands",
   },
-  "Shanghai":{
+  "Shanghai": {
     "name": "Shanghai",
     "state": "Eastern China",
     "country": "China"
   },
-  "Mexico":{
+  "Mexico": {
     "name": "Mexico City",
     "state": "Mexico",
     "country": "Mexico"
   },
-  "Bejing":{
+  "Bejing": {
     "name": "Bejing",
     "state": "Hebei",
     "country": "China"
   },
-  "Moscow":{
+  "Moscow": {
     "name": "Moscow",
     "state": "Moscow City",
     "country": "Russia"
   },
-  "Seoul":{
+  "Seoul": {
     "name": "Seoul",
     "state": "Seoul",
     "country": "South Korea"
   },
-  "Bangkok":{
+  "Bangkok": {
     "name": "Bangkok",
     "state": "Krung Thep",
     "country": "Thailand"
   },
-  "Chicago":{
+  "Chicago": {
     "name": "Chicago",
     "state": "Illinois",
     "country": "USA"
   },
-  "Madrid":{
+  "Madrid": {
     "name": "Madrid",
     "state": "Madrid",
     "country": "Spain"
   },
-  "Singapore":{
+  "Singapore": {
     "name": "Singapore",
     "state": "Singapore",
     "country": "Singapore"
   },
-  "Barcelona":{
+  "Barcelona": {
     "name": "Barcelona",
     "state": "Catalonia",
     "country": "Spain"
   },
-  "Jaipur":{
+  "Jaipur": {
     "name": "Jaipur",
     "state": "Rajasthan",
     "country": "India"
   },
-  "Hyderabad":{
+  "Hyderabad": {
     "name": "Hyderabad",
     "state": "Andhra Pradesh",
     "country": "India"
   },
-  "Pune":{
+  "Pune": {
     "name": "Pune",
     "state": "Maharashtra",
     "country": "India"
   },
-  "Agra":{
+  "Agra": {
     "name": "Agra",
     "state": "Uttar Pradesh",
     "country": "India"
   },
-  "Gurgaon":{
+  "Gurgaon": {
     "name": "Gurgaon",
     "state": "Haryana",
     "country": "India"
   },
-  "Noida":{
+  "Noida": {
     "name": "Noida",
     "state": "Uttar Pradesh",
     "country": "India"
   },
-  "Bhopal":{
+  "Bhopal": {
     "name": "Bhopal",
     "state": "Madhya Pradesh",
     "country": "India"
@@ -352,10 +352,14 @@ function getValues(city = "New Delhi") {
     latitude = lat;
     var daydata = res.forecast;
     let daytemp = new Array();
+    let dayWeatherCond = new Array();
     for (var i = 0; i < 3; i++) {
       // console.log(daydata.forecastday[i].day.avgtemp_c)
-      daytemp.push(daydata.forecastday[i].day.avgtemp_c)
+      daytemp.push(daydata.forecastday[i].day.avgtemp_c);
+      dayWeatherCond.push(daydata.forecastday[i].day.condition.text);
     }
+
+    dayWeatherCond.push(dayWeatherCond[0]);
     console.log(daytemp)
     var sunrise = daydata.forecastday[0].astro.sunrise;
     var sunset = daydata.forecastday[0].astro.sunset;
@@ -520,6 +524,57 @@ function getValues(city = "New Delhi") {
       document.getElementById('misty-icon').style.display = "none";
       document.getElementById('cloudy-icon').style.display = "none";
       document.getElementById('sunny-icon').style.display = "block";
+    }
+
+
+    var ids = ["day-today-icon", "day-tomorrow-icon", "day-2-icon", "day-3-icon"];
+    for (var i = 0; i < dayWeatherCond.length; i++) {
+      var weatherCond = dayWeatherCond[i];
+      var ic = document.getElementById(ids[i]);
+      if (thunderstorm.includes(weatherCond)) {
+        ic.innerHTML = '<div class="cloud"></div>' +
+          '<div class="lightning">' +
+          '<div class="bolt"></div>' +
+          '<div class="bolt"></div>' +
+          '</div>';
+      }
+
+      else if (rainy.includes(weatherCond)) {
+        ic.innerHTML = '<div class="cloud"></div>'
+          + '<div class="rain"></div>';
+      }
+
+      else if (snowy.includes(weatherCond)) {
+        ic.innerHTML = '<div class="cloud"></div>' +
+          '<div class="snow">' +
+          '<div class="flake"></div>' +
+          '<div class="flake"></div>' +
+          '</div>';
+      }
+
+      else if (sunCloud.includes(weatherCond)) {
+        ic.innerHTML = '<div class="cloud"></div>' +
+          '<div class="sunny">' +
+          '<div class="rays"></div>' +
+          '</div>' +
+          '<div class="rain"></div>';
+      }
+
+      else if (misty.includes(weatherCond)) {
+        ic.innerHTML = '<div class="cloud"></div>'
+          + '<div class="fog"></div>';
+      }
+
+      else if (cloudy.includes(weatherCond)) {
+        ic.innerHTML = '<div class="cloud"></div>' +
+          '<div class="cloud"></div>'
+      }
+
+      else {
+        ic.innerHTML = '<div class="sunny">' +
+          '<div class="rays"></div>' +
+          '</div>'
+      }
     }
 
   }
@@ -720,6 +775,7 @@ function renderResults(results, value) {
     dict3 = results;
   })
 }
+
 // Initialize and add the map
 function initMap() {
   // The location of Uluru
@@ -736,15 +792,15 @@ function initMap() {
   });
 }
 
-setInterval(()=>{
-  if(searchdone){
+setInterval(() => {
+  if (searchdone) {
     dict3.forEach(searchcity);
   }
 })
 
-function searchcity(city,index){
-  id = city.name+city.country
-  document.getElementById(id).onclick = function(){
+function searchcity(city, index) {
+  id = city.name + city.country
+  document.getElementById(id).onclick = function () {
     document.getElementById("innerconsole").style.display = "block";
     document.getElementById("search").style.display = "none";
     document.getElementById("inp").value = '';
