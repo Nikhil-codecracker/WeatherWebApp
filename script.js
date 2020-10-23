@@ -1,4 +1,4 @@
-var uvmap = ["No protection needed. You can safely stay outside", "Protection needed. Seek shade during late morning through mid-afternoon.", "Extra protection needed. Be careful outside, especially during afternoon"];
+var uvmap = ["No protection needed. You can safely stay outside using minimal protection.", "Protection needed. Seek shade during late morning through mid-afternoon.", "Extra protection needed. Be careful outside, especially during afternoon"];
 
 var visibleIndex = ["Excellent", "Very Good", "Good", "Moderate", "Poor"];
 var humidityIndex = [" Very Dry", "Dry", "Moderate", "Humid", "Very Humid"];
@@ -110,7 +110,7 @@ var dict = {
   },
   "Seoul":{
     "name": "Seoul",
-    "state": "NA",
+    "state": "Seoul",
     "country": "South Korea"
   },
   "Bangkok":{
@@ -130,7 +130,7 @@ var dict = {
   },
   "Singapore":{
     "name": "Singapore",
-    "state": "NA",
+    "state": "Singapore",
     "country": "Singapore"
   },
   "Barcelona":{
@@ -265,7 +265,7 @@ const dict2 = [
   },
   {
     "name": "Seoul",
-    "state": "NA",
+    "state": "Seoul",
     "country": "South Korea"
   },
   {
@@ -285,7 +285,7 @@ const dict2 = [
   },
   {
     "name": "Singapore",
-    "state": "NA",
+    "state": "Singapore",
     "country": "Singapore"
   },
   {
