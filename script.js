@@ -153,6 +153,26 @@ var dict = {
     "state": "Maharashtra",
     "country": "India"
   },
+  "Agra":{
+    "name": "Agra",
+    "state": "Uttar Pradesh",
+    "country": "India"
+  },
+  "Gurgaon":{
+    "name": "Gurgaon",
+    "state": "Haryana",
+    "country": "India"
+  },
+  "Noida":{
+    "name": "Noida",
+    "state": "Uttar Pradesh",
+    "country": "India"
+  },
+  "Bhopal":{
+    "name": "Bhopal",
+    "state": "Madhya Pradesh",
+    "country": "India"
+  },
 }
 const dict2 = [
   {
@@ -288,7 +308,26 @@ const dict2 = [
     "state": "Maharashtra",
     "country": "India"
   },
-  
+  {
+    "name": "Agra",
+    "state": "Uttar Pradesh",
+    "country": "India"
+  },
+  {
+    "name": "Gurgaon",
+    "state": "Haryana",
+    "country": "India"
+  },
+  {
+    "name": "Noida",
+    "state": "Uttar Pradesh",
+    "country": "India"
+  },
+  {
+    "name": "Bhopal",
+    "state": "Madhya Pradesh",
+    "country": "India"
+  },
 ]
 
 //Main Call to original Page
