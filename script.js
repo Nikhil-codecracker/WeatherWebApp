@@ -566,6 +566,7 @@ function initMap() {
     map: map,
   });
 }
+initMap()
 
 setInterval(()=>{
   if(searchdone){
@@ -583,3 +584,8 @@ function searchcity(city,index){
     getValues(city.name);
   }
 }
+
+window.onload = function () { 
+  document.getElementById("loader-div").style.display="none";
+  document.getElementById("main-container").style.display="block";
+ }
