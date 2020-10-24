@@ -188,11 +188,6 @@ var dict = {
     "state": "New South Wales",
     "country": "Australia"
   },
-  "Sydney":{
-    "name": "Sydney",
-    "state": "Australian Capital Territory",
-    "country": "Australia"
-  },
   "Ottawa":{
     "name": "Ottawa",
     "state": "Ontario",
@@ -521,11 +516,6 @@ const dict2 = [
   {
     "name": "Sydney",
     "state": "New South Wales",
-    "country": "Australia"
-  },
-  {
-    "name": "Sydney",
-    "state": "Australian Capital Territory",
     "country": "Australia"
   },
   {
