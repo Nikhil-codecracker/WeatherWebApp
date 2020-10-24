@@ -751,5 +751,12 @@ path {
   .container{
     height: 90% !important;
   }
+  .today-highlight{
+    text-align: center;
+    font-size: 3rem;
+  }
+  .card{
+    text-align:center !important;
+  }
 
 }
