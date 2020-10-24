@@ -755,6 +755,9 @@ path {
     text-align: center;
     font-size: 3rem;
   }
+  .highlight{
+    margin-bottom: 2rem;
+  }
   .card{
     text-align:center !important;
   }
@@ -775,5 +778,8 @@ path {
   }
   .mediacardouter{
     margin-top: 0rem !important;
+  }
+  .about-media{
+    margin-bottom: 2rem !important;
   }
 }
