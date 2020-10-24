@@ -1,4 +1,4 @@
-var uvmap = ["No protection needed. You can safely stay outside using minimal protection.", "Protection needed. Seek shade during late morning through mid-afternoon.", "Extra protection needed. Be careful outside, especially during afternoon"];
+var uvmap = ["No protection needed. You can safely stay outside using minimal protection.", "Protection needed. Seek shade during late morning through mid-afternoon.", "Extra protection needed. Be careful outside, during afternoon"];
 
 var visibleIndex = ["Excellent", "Very Good", "Good", "Moderate", "Poor"];
 var humidityIndex = [" Very Dry", "Dry", "Moderate", "Humid", "Very Humid"];

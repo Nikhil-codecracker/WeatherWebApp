@@ -773,4 +773,7 @@ path {
   .media-query{
     font-size: 1.5rem !important;
   }
+  .mediacardouter{
+    margin-top: 0rem !important;
+  }
 }
