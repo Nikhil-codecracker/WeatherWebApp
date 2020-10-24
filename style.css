@@ -782,4 +782,10 @@ path {
   .about-media{
     margin-bottom: 2rem !important;
   }
+  .search-part{
+    margin-top: 2rem !important;
+  }
+  .card-media-margin{
+    padding: 0px 0px !important;
+  }
 }
