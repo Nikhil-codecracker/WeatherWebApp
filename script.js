@@ -93,7 +93,7 @@ var dict = {
     "state": "Eastern China",
     "country": "China"
   },
-  "Mexico": {
+  "Mexico City": {
     "name": "Mexico City",
     "state": "Mexico",
     "country": "Mexico"
