@@ -1130,20 +1130,7 @@ function renderResults(results, value) {
 }
 
 // Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  const uluru = { lat: latitude, lng: long };
-  // The map, centered at Uluru
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 4,
-    center: uluru,
-  });
-  // The marker, positioned at Uluru
-  const marker = new google.maps.Marker({
-    position: uluru,
-    map: map,
-  });
-}
+
 
 setInterval(() => {
   if (searchdone) {
@@ -1161,4 +1148,11 @@ function searchcity(city, index) {
     getValues(city.name);
   }
 }
-initMap();
+
+
+
+mapboxgl.accessToken = 'pk.eyJ1Ijoia2FydGlrZXlhNzIwMDEiLCJhIjoiY2tnbm94ZjZzMHZ6djJxcnhzZzBrZmFxYiJ9.3tbmWIIftn_7NpWZsQFn3A';
+var map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11'
+});
