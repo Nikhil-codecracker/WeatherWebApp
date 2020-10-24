@@ -788,4 +788,10 @@ path {
   .card-media-margin{
     padding: 0px 0px !important;
   }
+  .marginclass{
+    position: relative;
+    top: 8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 }
