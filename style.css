@@ -758,5 +758,19 @@ path {
   .card{
     text-align:center !important;
   }
-
+  .media2query{
+    font-size: 2rem;
+  }
+  .speed{
+    font-size: 2rem !important;
+  }
+  .card-text{
+    font-size: 1.5rem !important;
+  }
+  .card-title{
+    font-size: 1.5rem !important;
+  }
+  .media-query{
+    font-size: 1.5rem !important;
+  }
 }
