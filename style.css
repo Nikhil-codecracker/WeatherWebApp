@@ -794,4 +794,10 @@ path {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+  .mainheading{
+    font-size: 2.8rem;
+  }
+  .loc{
+    width: 11rem !important;
+  }
 }
