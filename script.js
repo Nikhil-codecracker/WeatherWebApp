@@ -346,7 +346,7 @@ var dict = {
   "Budapest":{
     "name": "Budapest",
     "state": "Budapest",
-    "country": "Hungry"
+    "country": "Hungary"
   },
 }
 const dict2 = [
@@ -676,7 +676,7 @@ const dict2 = [
   {
     "name": "Budapest",
     "state": "Budapest",
-    "country": "Hungry"
+    "country": "Hungary"
   },
 ]
 

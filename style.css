@@ -411,7 +411,7 @@ a {
   background: #fff;
   box-shadow: -2.1875em 0.6875em 0 -0.6875em #fff, 2.0625em 0.9375em 0 -0.9375em #fff, 0 0 0 0.375em rgb(15, 124, 212), -2.1875em 0.6875em 0 -0.3125em rgb(15, 124, 212), 2.0625em 0.9375em 0 -0.5625em rgb(15, 124, 212);
   opacity: 0.3;
-  transform: scale(0.5) translate(6em, -3em);
+  transform: scale(0.8) translate(6em, -3em);
   animation: cloud 4s linear infinite;
 }
 
@@ -614,7 +614,7 @@ a {
   }
   100% {
     opacity: 0;
-    transform: scale(0.5) translate(-200%, -3em);
+    transform: scale(0.8) translate(-200%, -3em);
   }
 }
 
