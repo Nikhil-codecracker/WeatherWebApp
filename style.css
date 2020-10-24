@@ -594,8 +594,8 @@ a {
     opacity: 0.2;
   }
   50% {
-    color: #0cf;
-    background: #0cf;
+    color: #FFC107;
+    background: #FFC107;
     opacity: 1;
   }
   55% {
