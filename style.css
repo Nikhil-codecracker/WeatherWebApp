@@ -696,9 +696,10 @@ path {
   height: 100%;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
-  background-image: url();
+  background-image: url("./images/coding1.jpg");
   background-position: bottom center;
-  background-size: cover;
+  background-size: 14rem 18.2rem;
+  background-repeat: no-repeat;
 }
 .portadaa2 {
   width: 100%;
