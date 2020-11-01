@@ -1129,7 +1129,7 @@ function renderResults(results, value) {
   })
 }
 
-// Initialize and add the map
+// Initialize and add the m
 
 
 setInterval(() => {
