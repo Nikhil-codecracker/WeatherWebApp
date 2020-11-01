@@ -801,4 +801,7 @@ path {
   .loc{
     width: 11rem !important;
   }
+  .setup-for-mob-view{
+    margin-top: -3.7rem !important;
+  }
 }
