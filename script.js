@@ -957,7 +957,7 @@ function getValues(city = "New Delhi") {
     else if (aqi_val < 500) {
       document.getElementById('aqi-status').innerHTML = "Very Unhealthy";
     }
-    else if(aqi_val == undefined){
+    else if(aqi_val == undefined || aqi_val == "-"){
       document.getElementById('aqi-status').innerHTML = "Not Available";
       document.getElementById('aqi-val').innerHTML = "NA";
     }
